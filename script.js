@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initFAQ();
     initSmoothScroll();
     initProjectCardGlow();
+    initThemeToggle();
 });
 
 /* ============================================
@@ -211,6 +212,29 @@ function initProjectCardGlow() {
             const y = ((e.clientY - rect.top) / rect.height) * 100;
             card.style.setProperty('--mouse-x', x + '%');
             card.style.setProperty('--mouse-y', y + '%');
+        });
+    });
+}
+
+/* ============================================
+   THEME TOGGLE
+   ============================================ */
+function initThemeToggle() {
+    const toggles = document.querySelectorAll('.theme-toggle');
+    if (!toggles.length) return;
+
+    // Check saved theme or default to dark
+    const savedTheme = localStorage.getItem('theme');
+    let currentTheme = savedTheme || 'dark';
+    
+    // Initial setup
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            localStorage.setItem('theme', currentTheme);
         });
     });
 }

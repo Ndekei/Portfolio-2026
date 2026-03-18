@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
     <!-- Cursor Glow -->
@@ -21,7 +21,12 @@
     <header class="header" id="header">
         <nav class="nav">
             <a href="#" class="nav-logo">
-                <span class="logo-text">NV</span>
+                <svg class="logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                    <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                    <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                    <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                </svg>
             </a>
             <ul class="nav-links">
                 <li><a href="#work" class="nav-link">Work</a></li>
@@ -31,6 +36,10 @@
             </ul>
             <div class="nav-actions">
                 <a href="https://medium.com/@victorndekei" target="_blank" class="nav-link nav-link--secondary">Blog</a>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
                 <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary">
                     <span>Book a Call</span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -53,6 +62,12 @@
             <li><a href="#faq" class="mobile-link">FAQ</a></li>
             <li><a href="https://medium.com/@victorndekei" target="_blank" class="mobile-link">Blog</a></li>
         </ul>
+        <div class="mobile-actions">
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </div>
         <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary btn--full">
             <span>Book a Call</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -85,17 +100,23 @@
             </div>
             <div class="hero-stats reveal-up">
                 <div class="stat">
-                    <span class="stat-number" data-target="6">0</span><span class="stat-suffix">+</span>
+                    <div class="stat-value">
+                        <span class="stat-number" data-target="6">0</span><span class="stat-suffix">+</span>
+                    </div>
                     <span class="stat-label">Years Experience</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat">
-                    <span class="stat-number" data-target="1">0</span><span class="stat-suffix">M+</span>
+                    <div class="stat-value">
+                        <span class="stat-number" data-target="1">0</span><span class="stat-suffix">M+</span>
+                    </div>
                     <span class="stat-label">Users Impacted</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat">
-                    <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
+                    <div class="stat-value">
+                        <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
+                    </div>
                     <span class="stat-label">Projects Delivered</span>
                 </div>
             </div>
@@ -148,26 +169,19 @@
             <div class="section-header reveal-up">
                 <span class="section-label">Featured Work</span>
                 <h2 class="section-title">Selected <br>case studies</h2>
-                <p class="section-desc">A curated collection of projects where design thinking met real-world impact.</p>
-            </div>
-
-            <div class="projects-grid">
+                <p class="section-desc">A curated collection of projects where design thinking met real-world im            <div class="projects-grid">
                 <!-- Project 1 -->
-                <article class="project-card project-card--large reveal-up" id="project-coop-login">
+                <article class="project-card reveal-up" id="project-coop-login">
                     <div class="project-card-image">
                         <img src="images/project-coop-login.jpg" alt="Co-op Bank Login Redesign" loading="lazy">
-                        <div class="project-card-overlay">
-                            <span class="project-view-btn">View Case Study →</span>
-                        </div>
                     </div>
                     <div class="project-card-content">
-                        <div class="project-tags">
-                            <span class="tag">App Design</span>
-                            <span class="tag">Mobile</span>
-                            <span class="tag">UX Strategy</span>
-                        </div>
                         <h3 class="project-title">Redesigning the Co-op Bank Login Page</h3>
-                        <p class="project-desc">Reimagining the authentication experience for one of Kenya's leading banks, improving user confidence and reducing login abandonment.</p>
+                        <p class="project-desc">Transforming the highest traffic screen into a powerful conversion engine and self-service hub for 9.5 million customers.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Read Case Study <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                            <a href="#" class="project-link project-link--external">View Live Site <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12V4h8m0 0v8m0-8L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
                     </div>
                 </article>
 
@@ -175,17 +189,14 @@
                 <article class="project-card reveal-up" id="project-coop-web">
                     <div class="project-card-image">
                         <img src="images/project-coop-web.jpg" alt="Co-op Bank Web Experience" loading="lazy">
-                        <div class="project-card-overlay">
-                            <span class="project-view-btn">View Case Study →</span>
-                        </div>
                     </div>
                     <div class="project-card-content">
-                        <div class="project-tags">
-                            <span class="tag">Web App</span>
-                            <span class="tag">UX Strategy</span>
+                        <h3 class="project-title">Transforming Internet Banking</h3>
+                        <p class="project-desc">I designed a next-gen internet banking platform that simplifies complex banking into a clean, intuitive and responsive interface. Manage cards, pay beneficiaries, view detailed statements and track your spending with unparalleled ease.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Read Case Study <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                            <a href="#" class="project-link project-link--external">View Live Site <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12V4h8m0 0v8m0-8L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                         </div>
-                        <h3 class="project-title">Transforming the Co-op Bank Web Experience</h3>
-                        <p class="project-desc">A complete overhaul of the web banking platform, focusing on accessibility, task efficiency, and modern design patterns.</p>
                     </div>
                 </article>
 
@@ -193,36 +204,29 @@
                 <article class="project-card reveal-up" id="project-k24">
                     <div class="project-card-image">
                         <img src="images/project-k24.jpg" alt="K24 Plus Mobile App" loading="lazy">
-                        <div class="project-card-overlay">
-                            <span class="project-view-btn">View Case Study →</span>
-                        </div>
                     </div>
                     <div class="project-card-content">
-                        <div class="project-tags">
-                            <span class="tag">Mobile App</span>
-                            <span class="tag">Android</span>
-                            <span class="tag">iOS</span>
-                        </div>
                         <h3 class="project-title">K24 Plus Mobile App</h3>
-                        <p class="project-desc">End-to-end UI/UX for a content platform scaled to 1M+ users, delivering news and entertainment across mobile platforms.</p>
+                        <p class="project-desc">Led the end-to-end Research and Design for K24 Plus, a content aggregation platform that scaled to over 1 million users.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Read Case Study <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                            <a href="#" class="project-link project-link--external">View Live Site <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12V4h8m0 0v8m0-8L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
                     </div>
                 </article>
 
                 <!-- Project 4 -->
-                <article class="project-card project-card--large reveal-up" id="project-1health">
+                <article class="project-card reveal-up" id="project-1health">
                     <div class="project-card-image">
                         <img src="images/project-1health.jpg" alt="My 1Health Website Revamp" loading="lazy">
-                        <div class="project-card-overlay">
-                            <span class="project-view-btn">View Case Study →</span>
-                        </div>
                     </div>
                     <div class="project-card-content">
-                        <div class="project-tags">
-                            <span class="tag">Web Design</span>
-                            <span class="tag">Healthcare</span>
+                        <h3 class="project-title">Global Insurance Website</h3>
+                        <p class="project-desc">I designed a next-gen internet banking platform that simplifies complex banking into a clean, intuitive and responsive interface. Manage cards, pay beneficiaries, view detailed statements and track your spending with unparalleled ease.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Read Case Study <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                            <a href="#" class="project-link project-link--external">View Live Site <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12V4h8m0 0v8m0-8L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                         </div>
-                        <h3 class="project-title">My 1Health Website Revamp</h3>
-                        <p class="project-desc">Redesigning the client-facing website and patient portal post-merger, creating a unified digital healthcare experience.</p>
                     </div>
                 </article>
 
@@ -230,18 +234,14 @@
                 <article class="project-card reveal-up" id="project-airone">
                     <div class="project-card-image">
                         <img src="images/project-airone.jpg" alt="AirOne Flight Booking" loading="lazy">
-                        <div class="project-card-overlay">
-                            <span class="project-view-btn">View Case Study →</span>
-                        </div>
                     </div>
                     <div class="project-card-content">
-                        <div class="project-tags">
-                            <span class="tag">UI Design</span>
-                            <span class="tag">UX Research</span>
-                            <span class="tag">Prototyping</span>
-                        </div>
                         <h3 class="project-title">AirOne — Flight Booking Flow</h3>
                         <p class="project-desc">Capstone project executing a complete product design cycle for an intuitive flight booking experience.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Read Case Study <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                            <a href="#" class="project-link project-link--external">View Live Site <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12V4h8m0 0v8m0-8L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
                     </div>
                 </article>
 
@@ -249,19 +249,17 @@
                 <article class="project-card reveal-up" id="project-urbanswap">
                     <div class="project-card-image">
                         <img src="images/project-urbanswap.jpg" alt="UrbanSwap Website" loading="lazy">
-                        <div class="project-card-overlay">
-                            <span class="project-view-btn">View Case Study →</span>
-                        </div>
                     </div>
                     <div class="project-card-content">
-                        <div class="project-tags">
-                            <span class="tag">Web Design</span>
-                            <span class="tag">E-Mobility</span>
-                        </div>
                         <h3 class="project-title">UrbanSwap Website</h3>
                         <p class="project-desc">Website redesign for an innovative e-mobility platform transforming urban transportation in Kenya.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Read Case Study <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                            <a href="#" class="project-link project-link--external">View Live Site <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12V4h8m0 0v8m0-8L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
                     </div>
                 </article>
+            </div>   </article>
             </div>
         </div>
     </section>
@@ -471,7 +469,12 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <span class="footer-logo">NV</span>
+                    <svg class="footer-logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                        <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                        <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                        <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                    </svg>
                     <p class="footer-tagline">Crafting digital experiences that make a difference.</p>
                 </div>
                 <div class="footer-links-grid">
@@ -512,6 +515,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
