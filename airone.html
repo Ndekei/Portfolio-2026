@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirOne Flight Booking Flow — Case Study</title>
+    <meta name="description" content="Airline Booking Flow Case Study by Victor Ndekei.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        /* Specific Case Study Styles - Enhanced Typography & Whitespace */
+        .cs-page {
+            padding-top: var(--space-7xl);
+            padding-bottom: var(--space-5xl);
+        }
+        .cs-hero {
+            padding: var(--space-4xl) 0 var(--space-5xl);
+            text-align: center;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .cs-hero-title {
+            font-family: var(--font-heading);
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            margin-bottom: var(--space-lg);
+            color: var(--color-text-primary);
+        }
+        .cs-hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        .cs-hero-image-container {
+            margin-top: var(--space-4xl);
+            width: 100%;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+        }
+        .cs-hero-image-container img {
+            width: 100%;
+            display: block;
+        }
+        
+        .cs-section {
+            padding: var(--space-5xl) 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        .cs-section:last-child {
+            border-bottom: none;
+        }
+        
+        .cs-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: var(--space-4xl);
+        }
+        
+        @media (max-width: 768px) {
+            .cs-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-2xl);
+            }
+        }
+        
+        .cs-header h3 {
+            font-family: var(--font-heading);
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            position: sticky;
+            top: 120px;
+        }
+        
+        .cs-content p {
+            font-size: 1.125rem;
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            margin-bottom: var(--space-lg);
+            font-weight: 300;
+        }
+        
+        .cs-content p a {
+             color: var(--color-accent);
+             text-decoration: underline;
+             text-decoration-color: var(--color-accent-subtle);
+             text-underline-offset: 4px;
+             transition: color var(--transition-fast);
+        }
+
+        .cs-content p a:hover {
+            color: var(--color-accent-light);
+            text-decoration-color: var(--color-accent-light);
+        }
+        
+        .cs-content ul, .cs-content ol {
+            margin-bottom: var(--space-xl);
+        }
+        
+        .cs-content li {
+            font-size: 1.125rem;
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            margin-bottom: var(--space-md);
+            padding-left: 24px;
+            position: relative;
+            font-weight: 300;
+        }
+        
+        .cs-content ul li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-size: 0.8em;
+            top: 6px;
+        }
+
+        .cs-content ol {
+            counter-reset: my-counter;
+        }
+
+        .cs-content ol li {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .cs-content ol li::before {
+            counter-increment: my-counter;
+            content: counter(my-counter) ". ";
+            color: var(--color-accent);
+            font-weight: 600;
+            font-family: var(--font-heading);
+            margin-right: 8px;
+        }
+        
+        .cs-content strong {
+            color: var(--color-text-primary);
+            font-weight: 500;
+        }
+        
+        .cs-image-full {
+            margin: var(--space-4xl) 0;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+        }
+        
+        .cs-image-full img {
+            width: 100%;
+            display: block;
+        }
+
+        .cs-video-full {
+            margin: var(--space-4xl) 0;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            width: 100%;
+        }
+
+        .cs-video-full video {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">
+                <svg class="logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                    <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                    <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                    <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                </svg>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#work" class="nav-link">Work</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#explorations" class="nav-link">Explorations</a></li>
+                <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://medium.com/@victorndekei" target="_blank" class="nav-link nav-link--secondary">Blog</a>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary">
+                    <span>Book a Call</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-links">
+            <li><a href="index.html#work" class="mobile-link">Work</a></li>
+            <li><a href="index.html#about" class="mobile-link">About</a></li>
+            <li><a href="index.html#explorations" class="mobile-link">Explorations</a></li>
+            <li><a href="index.html#faq" class="mobile-link">FAQ</a></li>
+            <li><a href="https://medium.com/@victorndekei" target="_blank" class="mobile-link">Blog</a></li>
+        </ul>
+        <div class="mobile-actions">
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </div>
+        <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary btn--full">
+            <span>Book a Call</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="cs-page">
+        <div class="container">
+            <div class="cs-hero reveal-up">
+                <div class="section-label">Case Study</div>
+                <h1 class="cs-hero-title">Airline Booking Flow Case Study</h1>
+                <p class="cs-hero-subtitle">AirOne is an airline that simplifies travel by offering a seamless booking experience.</p>
+                <div class="cs-hero-image-container">
+                    <img src="images/airone-hero.jpg" alt="AirOne Flight Booking Hero Presentation" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Overview -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <h3>Overview</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <p>As a requirement for my fulfillment of my Associate's Degree at UX Design Institute, I was required to create a project that showcases the full product cycle right from Ideation to Deployment. In this case study, I will take you through my research process, analysis of collected data and the implementation of actionable insights from my research through redesign of the booking flow of a flight.</p>
+                        
+                        <div style="margin-top: var(--space-4xl);">
+                            <h4 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: var(--space-lg); color: var(--color-text-primary);">Project Context</h4>
+                            <ul>
+                                <li><strong>Role:</strong> Product Designer & Researcher</li>
+                                <li><strong>Industry:</strong> Travel</li>
+                                <li><strong>Software:</strong> Figma, Miro, Figjam</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research & Analysis -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <h3>Research & Analysis</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <p>With tens of tools out there to utilise, for this project I conducted a competitive benchmark, usability tests and made use of existing usability test records provided by my school along the same project I was working on. I conducted a <a href="https://youtu.be/2QLVxCW9wSU" target="_blank">Usability Test</a> with a user who has flown a couple of times and has experience with flight booking. See video to get more context and insights gathered. From the material provided by the school, I did a <a href="https://docs.google.com/document/d/1tnt0-Thtm5A_JuA2cBTUJxoMuR6j0sZYe6fDH_MwQEI/edit?usp=sharing" target="_blank">Note-taking exercise</a> from other usability tests conducted and came up with very insightful, actionable items.</p>
+                        <p>Coupled with more research I had conducted on the internet, I put together all my raw data together on stick-on notes in Figjam to collate it in one place as raw data, sort through it and group it into thematic groupings. Below is an embed of my playfield on Figjam.</p>
+                        
+                        <div class="cs-image-full reveal-up">
+                            <img src="images/airone-raw-data.jpeg" alt="Raw Data Grouping" loading="lazy">
+                        </div>
+                        <div class="cs-image-full reveal-up">
+                            <img src="images/airone-customer-journey.jpeg" alt="Customer Journey Map" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Wireframing & Interaction Design -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <h3>Wireframing & Interaction Design</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <p>Wireframing was a key part of the process when trying to put down random ideas that could be potential solutions. Interaction Design on the other hand helped me flesh out how the system will work and how processes will flow from one state to another, one page to another. Rapid sketching is a powerful tool when utilised correctly will lead you to the most appropriate solution quicker.</p>
+                        
+                        <div class="cs-image-full reveal-up">
+                            <img src="images/airone-wireframes.png" alt="Wireframing Asset" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Prototyping -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <h3>Prototyping</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <p>After combing through my research, creating wireframes and fleshing out my interactions, I got to the juicy stuff, PROTOTYPING.</p>
+                        <p>My final prototype was user-centred, solving key problems around the following key points:</p>
+                        <ol>
+                            <li>Easier selection of flights.</li>
+                            <li>Breakdown of flight extras and features associated with specific fare options.</li>
+                            <li>Straightforward checking-out.</li>
+                            <li>Pricing and payment flow.</li>
+                        </ol>
+
+                        <div class="cs-video-full reveal-up">
+                            <video autoplay loop muted playsinline>
+                                <source src="images/airone-prototype-video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lessons Learnt -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <h3>Lessons Learnt</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <p>A lot of lessons were learnt. I'll highlight just a few:</p>
+                        <ol>
+                            <li>You can never be short of research methodologies to make sure you solve your users needs.</li>
+                            <li>Speak to your users often.</li>
+                            <li>Always design from a users point of view.</li>
+                            <li>Iterate! Iterate! Iterate!</li>
+                            <li>Most times you will never get it right on the first go, however aim for a good first impression.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <svg class="footer-logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                        <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                        <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                        <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                    </svg>
+                    <p class="footer-tagline">Crafting digital experiences that make a difference.</p>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Navigation</h4>
+                        <ul>
+                            <li><a href="index.html#work">Work</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#explorations">Explorations</a></li>
+                            <li><a href="index.html#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Connect</h4>
+                        <ul>
+                            <li><a href="https://dribbble.com/Ndekei" target="_blank">Dribbble</a></li>
+                            <li><a href="https://medium.com/@victorndekei" target="_blank">Medium</a></li>
+                            <li><a href="https://linkedin.com/in/victorndekei" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/victorndekei" target="_blank">Twitter / X</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Get in Touch</h4>
+                        <ul>
+                            <li><a href="https://cal.com/victorndekei/15min" target="_blank">Book a Call</a></li>
+                            <li><a href="mailto:hello@victorndekei.com">Email Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 Victor Ndekei. All rights reserved.</p>
+                <p class="footer-credit">Designed & crafted with ♥</p>
+            </div>
+        </div>
+        <div class="footer-giant-text" aria-hidden="true">
+            <span>VICTOR NDEKEI</span>
+        </div>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>
