@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-op Bank Login Redesign — Case Study</title>
+    <meta name="description" content="Redesigning the Co-op Bank Login Page Case Study.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        /* Specific Case Study Styles - Enhanced Typography & Whitespace */
+        .cs-page {
+            padding-top: var(--space-7xl);
+            padding-bottom: var(--space-5xl);
+        }
+        .cs-hero {
+            padding: var(--space-4xl) 0 var(--space-5xl);
+            text-align: center;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .cs-hero-title {
+            font-family: var(--font-heading);
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            margin-bottom: var(--space-lg);
+            color: var(--color-text-primary);
+        }
+        .cs-hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        .cs-hero-image-container {
+            margin-top: var(--space-4xl);
+            width: 100%;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+        }
+        .cs-hero-image-container img {
+            width: 100%;
+            display: block;
+        }
+        
+        .cs-section {
+            padding: var(--space-5xl) 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        .cs-section:last-child {
+            border-bottom: none;
+        }
+        
+        .cs-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: var(--space-4xl);
+        }
+        
+        @media (max-width: 768px) {
+            .cs-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-2xl);
+            }
+        }
+        
+        .cs-header h3 {
+            font-family: var(--font-heading);
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            position: sticky;
+            top: 120px;
+        }
+        
+        .cs-content p {
+            font-size: 1.125rem;
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            margin-bottom: var(--space-lg);
+            font-weight: 300;
+        }
+        
+        .cs-content ul {
+            margin-bottom: var(--space-xl);
+        }
+        
+        .cs-content li {
+            font-size: 1.125rem;
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            margin-bottom: var(--space-md);
+            padding-left: 24px;
+            position: relative;
+            font-weight: 300;
+        }
+        
+        .cs-content li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-size: 0.8em;
+            top: 6px;
+        }
+        
+        .cs-content strong {
+            color: var(--color-text-primary);
+            font-weight: 500;
+        }
+        
+        .cs-image-full {
+            margin: var(--space-4xl) 0;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+        }
+        
+        .cs-image-full img {
+            width: 100%;
+            display: block;
+        }
+
+        .cs-quote-block {
+            margin-top: var(--space-3xl);
+            padding: var(--space-2xl);
+            border-left: 4px solid var(--color-accent);
+            background: color-mix(in srgb, var(--color-accent) 4%, transparent);
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+        }
+
+        .cs-quote-block p {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--color-text-primary);
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">
+                <svg class="logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                    <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                    <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                    <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                </svg>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#work" class="nav-link">Work</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#explorations" class="nav-link">Explorations</a></li>
+                <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://medium.com/@victorndekei" target="_blank" class="nav-link nav-link--secondary">Blog</a>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary">
+                    <span>Book a Call</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-links">
+            <li><a href="index.html#work" class="mobile-link">Work</a></li>
+            <li><a href="index.html#about" class="mobile-link">About</a></li>
+            <li><a href="index.html#explorations" class="mobile-link">Explorations</a></li>
+            <li><a href="index.html#faq" class="mobile-link">FAQ</a></li>
+            <li><a href="https://medium.com/@victorndekei" target="_blank" class="mobile-link">Blog</a></li>
+        </ul>
+        <div class="mobile-actions">
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </div>
+        <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary btn--full">
+            <span>Book a Call</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="cs-page">
+        <div class="container">
+            <div class="cs-hero reveal-up">
+                <div class="section-label">Case Study</div>
+                <h1 class="cs-hero-title">Redesigning the Co-op Bank Login Page</h1>
+                <p class="cs-hero-subtitle">Transform the highest-traffic screen in the app from a static "utility gate" into a dynamic discovery hub that delivers value before authentication.</p>
+                <div class="cs-hero-image-container">
+                    <img src="images/coop-login-hero.png" alt="Co-op Bank Redesigned Login Interface">
+                </div>
+            </div>
+
+            <!-- Overview & Strategy -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <h3>Overview & Strategy</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <ul>
+                            <li><strong>The Problem:</strong> For years, the login screen was a barrier that blocked users from simple information (like Forex rates or ATM locations) and missed opportunities for the bank to showcase products like Kamilisha (overdraft) or Loans.</li>
+                            <li><strong>The Solution:</strong> A modular, dynamic architecture balancing three pillars: Marketing Discovery, Self-Service Empowerment, and Secure Authentication.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Process: Research & Logic -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <h3>The Process</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <ul>
+                            <li><strong>Evidence-Based Design:</strong> Anchored in support log analysis and user interviews. Discovered that many "login attempts" were actually users seeking quick info (rates) or help (locked out).</li>
+                            <li><strong>Prioritization Matrix:</strong> Used to determine which features (like Kamilisha banners and Branch Locator) earned "prime real estate" outside the login gate.</li>
+                            <li><strong>Benchmarking:</strong> Competitive analysis against global neobanks to ensure a world-class experience tailored for the Kenyan market.</li>
+                        </ul>
+                        
+                        <div class="cs-image-full reveal-up">
+                            <img src="images/coop-login-sketch-1.png" alt="Hand-drawn layout concepts" loading="lazy">
+                        </div>
+                        <div class="cs-image-full reveal-up">
+                            <img src="images/coop-login-sketch-2.png" alt="Self-service research sketches" loading="lazy">
+                        </div>
+                        <div class="cs-image-full reveal-up">
+                            <img src="images/coop-login-wireframes.png" alt="Initial digital wireframes" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Implementation & Craft -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <h3>Implementation</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <ul>
+                            <li><strong>Visual Direction:</strong> Leveraged the bank's "Kingdom" branding, elevated with depth, subtle gradients, and crisp iconography.</li>
+                            <li><strong>Technical Leadership:</strong> Acted as a bridge between design and engineering, ensuring the live product was built with "native-first" principles for smooth animations and responsive layouts across all devices (high-end to entry-level).</li>
+                        </ul>
+                        
+                        <div class="cs-image-full reveal-up">
+                            <img src="images/coop-login-prototypes.png" alt="Rapid Prototypes and Final Screens" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Outcomes & Impact -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <h3>Outcomes & Impact</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <ul>
+                            <li><strong>Social Proof:</strong> Sparked organic positive sentiment, with users publicly applauding the "cleaner vibe."</li>
+                            <li><strong>Behavioral Shift:</strong> Immediate uptick in pre-login engagement with product banners.</li>
+                            <li><strong>Operational Efficiency:</strong> Reduced friction by moving high-frequency help tasks to the front of the app.</li>
+                        </ul>
+
+                        <div class="cs-quote-block reveal-up">
+                            <p>"When a user takes the time to publicly applaud a banking app's login screen, you know you've moved beyond utility into an emotional connection."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <svg class="footer-logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                        <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                        <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                        <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                    </svg>
+                    <p class="footer-tagline">Crafting digital experiences that make a difference.</p>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Navigation</h4>
+                        <ul>
+                            <li><a href="index.html#work">Work</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#explorations">Explorations</a></li>
+                            <li><a href="index.html#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Connect</h4>
+                        <ul>
+                            <li><a href="https://dribbble.com/Ndekei" target="_blank">Dribbble</a></li>
+                            <li><a href="https://medium.com/@victorndekei" target="_blank">Medium</a></li>
+                            <li><a href="https://linkedin.com/in/victorndekei" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/victorndekei" target="_blank">Twitter / X</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Get in Touch</h4>
+                        <ul>
+                            <li><a href="https://cal.com/victorndekei/15min" target="_blank">Book a Call</a></li>
+                            <li><a href="mailto:hello@victorndekei.com">Email Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 Victor Ndekei. All rights reserved.</p>
+                <p class="footer-credit">Designed & crafted with ♥</p>
+            </div>
+        </div>
+        <div class="footer-giant-text" aria-hidden="true">
+            <span>VICTOR NDEKEI</span>
+        </div>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>
