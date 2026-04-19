@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Ndekei Family Crest — Tree of Life">
+  <title>Ndekei Family Crest</title>
+  <desc>A circular seal featuring a tree of life whose trunk forms the letter N, rooted in streams of water, crowned with a cross. Scripture motto: As for me and my house, we will serve the Lord — Joshua 24:15. Founded 2023.</desc>
+
+  <defs>
+    <!-- Top arc for motto (left to right across the top) -->
+    <path id="crest-arc-top" d="M 40 200 A 160 160 0 0 1 360 200" fill="none"/>
+    <!-- Bottom arc for name/year (reads upright along the bottom) -->
+    <path id="crest-arc-bottom" d="M 360 200 A 160 160 0 0 1 40 200" fill="none"/>
+  </defs>
+
+  <g fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Outer seal rings -->
+    <circle cx="200" cy="200" r="192" stroke-width="1.5"/>
+    <circle cx="200" cy="200" r="178"/>
+    <circle cx="200" cy="200" r="148" stroke-width="0.75" opacity="0.55"/>
+
+    <!-- Ornamental cardinal markers between rings -->
+    <g fill="currentColor" stroke="none">
+      <circle cx="200" cy="8"   r="1.6"/>
+      <circle cx="200" cy="392" r="1.6"/>
+      <circle cx="8"   cy="200" r="1.6"/>
+      <circle cx="392" cy="200" r="1.6"/>
+    </g>
+
+    <!-- Small decorative stars flanking the bottom name band -->
+    <g stroke-width="0.9">
+      <path d="M 88 215 l 3 -3 M 88 215 l -3 -3 M 88 215 l 3 3 M 88 215 l -3 3"/>
+      <path d="M 312 215 l 3 -3 M 312 215 l -3 -3 M 312 215 l 3 3 M 312 215 l -3 3"/>
+    </g>
+
+    <!-- Cross at the apex — God first -->
+    <g stroke-width="1.4">
+      <line x1="200" y1="62" x2="200" y2="86"/>
+      <line x1="190" y1="70" x2="210" y2="70"/>
+    </g>
+
+    <!-- Canopy — abstract rounded crown of the tree (two gentle arcs) -->
+    <path d="M 132 170
+             C 128 130, 158 92, 200 92
+             C 242 92, 272 130, 268 170"/>
+    <path d="M 144 180
+             C 146 150, 170 124, 200 124
+             C 230 124, 254 150, 256 180"
+          opacity="0.55"/>
+
+    <!-- Inner branches emerging from trunk into the canopy -->
+    <path d="M 200 180 C 186 168, 170 158, 158 150"/>
+    <path d="M 200 180 C 214 168, 230 158, 242 150"/>
+    <path d="M 200 180 C 196 160, 192 140, 190 118"/>
+    <path d="M 200 180 C 204 160, 208 140, 210 118"/>
+
+    <!-- Seven leaves — one for each core value: God, Love, Honesty, Wisdom, Patience, Growth, Unity -->
+    <g>
+      <!-- Top center -->
+      <path d="M 200 110 q 6 -8 0 -18 q -6 10 0 18 Z"/>
+      <!-- Upper left -->
+      <path d="M 168 130 q -2 -10 -12 -12 q 2 10 12 12 Z"/>
+      <!-- Upper right -->
+      <path d="M 232 130 q 2 -10 12 -12 q -2 10 -12 12 Z"/>
+      <!-- Mid left -->
+      <path d="M 150 158 q -6 -6 -16 -4 q 6 6 16 4 Z"/>
+      <!-- Mid right -->
+      <path d="M 250 158 q 6 -6 16 -4 q -6 6 -16 4 Z"/>
+      <!-- Inner left -->
+      <path d="M 180 146 q -4 -8 -12 -10 q 4 8 12 10 Z"/>
+      <!-- Inner right -->
+      <path d="M 220 146 q 4 -8 12 -10 q -4 8 -12 10 Z"/>
+    </g>
+
+    <!-- Trunk — stylized letter N (two uprights + diagonal) -->
+    <g stroke-width="2">
+      <line x1="178" y1="182" x2="178" y2="282"/>
+      <line x1="222" y1="182" x2="222" y2="282"/>
+      <line x1="178" y1="182" x2="222" y2="282"/>
+    </g>
+
+    <!-- Roots — fanning outward from the base of the trunk -->
+    <path d="M 200 282 C 186 294, 168 300, 148 302"/>
+    <path d="M 200 282 C 214 294, 232 300, 252 302"/>
+    <path d="M 200 282 C 192 298, 180 308, 168 316"/>
+    <path d="M 200 282 C 208 298, 220 308, 232 316"/>
+    <path d="M 200 282 C 200 300, 200 312, 200 320"/>
+
+    <!-- Streams of water — Psalm 1:3 -->
+    <path d="M 118 326 q 10 -6 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0" opacity="0.8"/>
+    <path d="M 130 336 q 10 -5 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0" opacity="0.55"/>
+  </g>
+
+  <!-- Motto band — Scripture top, family name + year bottom -->
+  <g fill="currentColor" font-family="'Cormorant Garamond', 'EB Garamond', Georgia, serif" letter-spacing="3">
+    <text font-size="13" font-weight="500">
+      <textPath href="#crest-arc-top" startOffset="50%" text-anchor="middle">
+        AS FOR ME AND MY HOUSE · WE WILL SERVE THE LORD
+      </textPath>
+    </text>
+    <text font-size="13" font-weight="500">
+      <textPath href="#crest-arc-bottom" startOffset="50%" text-anchor="middle">
+        NDEKEI  ·  EST  MMXXIII  ·  JOSHUA 24:15
+      </textPath>
+    </text>
+  </g>
+</svg>

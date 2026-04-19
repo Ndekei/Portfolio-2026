@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ndekei Family — A God-first home, built for legacy</title>
+    <meta name="description" content="The Ndekei Family — our mission, our values, the children we will raise, the legacy we intend to leave. Nairobi, Est. MMXXIII.">
+    <meta name="theme-color" content="#F5EFE4">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Paper grain overlay -->
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <header class="nav">
+        <a href="#top" class="nav-mark" aria-label="Ndekei home">
+            <svg class="nav-crest" viewBox="0 0 400 400" width="28" height="28" aria-hidden="true">
+                <g fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="200" cy="200" r="184"/>
+                    <line x1="165" y1="180" x2="165" y2="290"/>
+                    <line x1="235" y1="180" x2="235" y2="290"/>
+                    <line x1="165" y1="180" x2="235" y2="290"/>
+                    <line x1="200" y1="80" x2="200" y2="110"/>
+                    <line x1="185" y1="95" x2="215" y2="95"/>
+                </g>
+            </svg>
+            <span class="nav-wordmark">Ndekei</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="#mission">Mission</a>
+            <a href="#who">Who We Are</a>
+            <a href="#values">Values</a>
+            <a href="#children">The Children</a>
+            <a href="#road">The Road</a>
+            <a href="#legacy">Legacy</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                <svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#mission">Mission</a>
+        <a href="#who">Who We Are</a>
+        <a href="#values">Values</a>
+        <a href="#children">The Children</a>
+        <a href="#road">The Road</a>
+        <a href="#legacy">Legacy</a>
+    </div>
+
+    <main id="top">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="hero-crest reveal">
+                    <!-- Full crest inline -->
+                    <svg viewBox="0 0 400 400" width="260" height="260" aria-labelledby="crestTitle crestDesc" role="img">
+                        <title id="crestTitle">Ndekei Family Crest</title>
+                        <desc id="crestDesc">Tree of life seal, Joshua 24:15, est. MMXXIII.</desc>
+                        <defs>
+                            <path id="arc-top" d="M 40 200 A 160 160 0 0 1 360 200" fill="none"/>
+                            <path id="arc-bottom" d="M 360 200 A 160 160 0 0 1 40 200" fill="none"/>
+                        </defs>
+                        <g fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="200" cy="200" r="192" stroke-width="1.5"/>
+                            <circle cx="200" cy="200" r="178"/>
+                            <circle cx="200" cy="200" r="148" stroke-width="0.75" opacity="0.55"/>
+                            <g fill="currentColor" stroke="none">
+                                <circle cx="200" cy="8" r="1.6"/>
+                                <circle cx="200" cy="392" r="1.6"/>
+                                <circle cx="8" cy="200" r="1.6"/>
+                                <circle cx="392" cy="200" r="1.6"/>
+                            </g>
+                            <g stroke-width="0.9">
+                                <path d="M 88 215 l 3 -3 M 88 215 l -3 -3 M 88 215 l 3 3 M 88 215 l -3 3"/>
+                                <path d="M 312 215 l 3 -3 M 312 215 l -3 -3 M 312 215 l 3 3 M 312 215 l -3 3"/>
+                            </g>
+                            <g stroke-width="1.4">
+                                <line x1="200" y1="62" x2="200" y2="86"/>
+                                <line x1="190" y1="70" x2="210" y2="70"/>
+                            </g>
+                            <path d="M 132 170 C 128 130, 158 92, 200 92 C 242 92, 272 130, 268 170"/>
+                            <path d="M 144 180 C 146 150, 170 124, 200 124 C 230 124, 254 150, 256 180" opacity="0.55"/>
+                            <path d="M 200 180 C 186 168, 170 158, 158 150"/>
+                            <path d="M 200 180 C 214 168, 230 158, 242 150"/>
+                            <path d="M 200 180 C 196 160, 192 140, 190 118"/>
+                            <path d="M 200 180 C 204 160, 208 140, 210 118"/>
+                            <g>
+                                <path d="M 200 110 q 6 -8 0 -18 q -6 10 0 18 Z"/>
+                                <path d="M 168 130 q -2 -10 -12 -12 q 2 10 12 12 Z"/>
+                                <path d="M 232 130 q 2 -10 12 -12 q -2 10 -12 12 Z"/>
+                                <path d="M 150 158 q -6 -6 -16 -4 q 6 6 16 4 Z"/>
+                                <path d="M 250 158 q 6 -6 16 -4 q -6 6 -16 4 Z"/>
+                                <path d="M 180 146 q -4 -8 -12 -10 q 4 8 12 10 Z"/>
+                                <path d="M 220 146 q 4 -8 12 -10 q -4 8 -12 10 Z"/>
+                            </g>
+                            <g stroke-width="2">
+                                <line x1="178" y1="182" x2="178" y2="282"/>
+                                <line x1="222" y1="182" x2="222" y2="282"/>
+                                <line x1="178" y1="182" x2="222" y2="282"/>
+                            </g>
+                            <path d="M 200 282 C 186 294, 168 300, 148 302"/>
+                            <path d="M 200 282 C 214 294, 232 300, 252 302"/>
+                            <path d="M 200 282 C 192 298, 180 308, 168 316"/>
+                            <path d="M 200 282 C 208 298, 220 308, 232 316"/>
+                            <path d="M 200 282 C 200 300, 200 312, 200 320"/>
+                            <path d="M 118 326 q 10 -6 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0" opacity="0.8"/>
+                            <path d="M 130 336 q 10 -5 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0" opacity="0.55"/>
+                        </g>
+                        <g fill="currentColor" font-family="'Cormorant Garamond', 'EB Garamond', Georgia, serif" letter-spacing="3">
+                            <text font-size="13" font-weight="500">
+                                <textPath href="#arc-top" startOffset="50%" text-anchor="middle">AS FOR ME AND MY HOUSE · WE WILL SERVE THE LORD</textPath>
+                            </text>
+                            <text font-size="13" font-weight="500">
+                                <textPath href="#arc-bottom" startOffset="50%" text-anchor="middle">NDEKEI  ·  EST  MMXXIII  ·  JOSHUA 24:15</textPath>
+                            </text>
+                        </g>
+                    </svg>
+                </div>
+
+                <p class="eyebrow reveal">The Household of</p>
+                <h1 class="hero-title reveal">The Ndekei Family</h1>
+                <p class="hero-lede reveal">
+                    A God-first home — rooted in love, raised in wisdom, built for legacy.
+                </p>
+
+                <div class="hero-scripture reveal">
+                    <span class="rule"></span>
+                    <p>"As for me and my house, we will serve the Lord."</p>
+                    <cite>Joshua 24:15</cite>
+                </div>
+            </div>
+
+            <a href="#mission" class="scroll-cue" aria-label="Scroll to begin">
+                <span>Begin</span>
+                <svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 1v16M1 12l6 6 6-6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </section>
+
+        <!-- MISSION / VISION -->
+        <section class="section section--mission" id="mission">
+            <div class="container container--narrow">
+                <div class="section-head reveal">
+                    <span class="chapter">I</span>
+                    <p class="eyebrow">Our North Star</p>
+                    <h2 class="section-title">Mission &amp; Vision</h2>
+                </div>
+
+                <div class="mission-grid">
+                    <article class="mission-card reveal">
+                        <p class="mission-label">Mission</p>
+                        <p class="mission-body">
+                            To build a God-first home rooted in love, honesty, and the pursuit of wisdom — where our children are raised to know who they are, whose they are, and the depth of the legacy they carry.
+                        </p>
+                    </article>
+                    <article class="mission-card reveal">
+                        <p class="mission-label">Vision</p>
+                        <p class="mission-body">
+                            A family whose faith, craft, and character echo through generations — leaving the world more loving, more honest, and more beautiful than we found it.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHO WE ARE -->
+        <section class="section section--who" id="who">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="chapter">II</span>
+                    <p class="eyebrow">The Two Made One</p>
+                    <h2 class="section-title">Who We Are</h2>
+                </div>
+
+                <div class="who-grid">
+                    <article class="who-card reveal">
+                        <div class="who-portrait">
+                            <span class="who-initial">V</span>
+                            <span class="who-portrait-tag">Portrait forthcoming</span>
+                        </div>
+                        <p class="who-name">Victor Ndekei</p>
+                        <p class="who-role">Husband · Father-in-Waiting · Product Designer</p>
+                        <p class="who-bio">
+                            Creative at heart. A product designer who takes his craft seriously and is driven by the impact his work has in the world. Off the screen, he finds himself at the piano, behind a drone camera, or with his hands in the garden — quietly cultivating beauty in small, patient ways.
+                        </p>
+                    </article>
+
+                    <article class="who-card reveal">
+                        <div class="who-portrait">
+                            <span class="who-initial">L</span>
+                            <span class="who-portrait-tag">Portrait forthcoming</span>
+                        </div>
+                        <p class="who-name">Lisa Ndekei</p>
+                        <p class="who-role">Wife · Mother-in-Waiting · Actuary, Global Insurance</p>
+                        <p class="who-bio">
+                            A trained actuary with a heart for home. She finds meaning in the quiet art of homemaking — a beautiful table, a thoughtful meal, a fragrance that lingers. She believes in taking exquisite care of herself and her people, and in making room for the finer things without ever losing sight of what's eternal.
+                        </p>
+                    </article>
+                </div>
+
+                <p class="who-union reveal">
+                    Joined in covenant <span class="amp">&</span> est. <span class="year">MMXXIII</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- VALUES -->
+        <section class="section section--values" id="values">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="chapter">III</span>
+                    <p class="eyebrow">The Stones We Stand On</p>
+                    <h2 class="section-title">Our Values</h2>
+                    <p class="section-sub">Nine convictions we return to — every day, every week, every year, every generation.</p>
+                </div>
+
+                <ol class="values-grid">
+                    <li class="value-card reveal">
+                        <span class="value-num">01</span>
+                        <h3 class="value-name">God First</h3>
+                        <p class="value-desc">Every decision, large or small, begins and ends at His feet.</p>
+                        <p class="value-scripture">"You shall have no other gods before Me." — Exodus 20:3</p>
+                    </li>
+                    <li class="value-card reveal">
+                        <span class="value-num">02</span>
+                        <h3 class="value-name">Love</h3>
+                        <p class="value-desc">The language of our home — spoken freely, modeled daily, never withheld.</p>
+                        <p class="value-scripture">"Above all, love each other deeply." — 1 Peter 4:8</p>
+                    </li>
+                    <li class="value-card reveal">
+                        <span class="value-num">03</span>
+                        <h3 class="value-name">Honesty</h3>
+                        <p class="value-desc">With ourselves, with each other, with the world — no version we hide.</p>
+                        <p class="value-scripture">"The Lord delights in people who are trustworthy." — Proverbs 12:22</p>
+                    </li>
+                    <li class="value-card reveal">
+                        <span class="value-num">04</span>
+                        <h3 class="value-name">Truthfulness</h3>
+                        <p class="value-desc">The truth, spoken in love, is the only foundation worth building on.</p>
+                        <p class="value-scripture">"Speak the truth in love." — Ephesians 4:15</p>
+                    </li>
+                    <li class="value-card reveal">
+                        <span class="value-num">05</span>
+                        <h3 class="value-name">Transparency</h3>
+                        <p class="value-desc">Nothing lived in the dark. We walk in the light, and so shall our children.</p>
+                        <p class="value-scripture">"Walk in the light, as He is in the light." — 1 John 1:7</p>
+                    </li>
+                    <li class="value-card reveal">
+                        <span class="value-num">06</span>
+                        <h3 class="value-name">Continuous Growth</h3>
+                        <p class="value-desc">We are becoming. Each day, better — in mind, in spirit, in craft.</p>
+                        <p class="value-scripture">"Grow in the grace and knowledge of our Lord." — 2 Peter 3:18</p>
+                    </li>
+                    <li class="value-card reveal">
+                        <span class="value-num">07</span>
+                        <h3 class="value-name">Wisdom</h3>
+                        <p class="value-desc">Knowledge is cheap; wisdom is earned. We pursue it like treasure.</p>
+                        <p class="value-scripture">"The fear of the Lord is the beginning of wisdom." — Proverbs 9:10</p>
+                    </li>
+                    <li class="value-card reveal">
+                        <span class="value-num">08</span>
+                        <h3 class="value-name">Patience</h3>
+                        <p class="value-desc">We build slowly, deliberately, and with care. Great things take time.</p>
+                        <p class="value-scripture">"Love is patient, love is kind." — 1 Corinthians 13:4</p>
+                    </li>
+                    <li class="value-card reveal">
+                        <span class="value-num">09</span>
+                        <h3 class="value-name">Unity</h3>
+                        <p class="value-desc">One household, one heart, one direction. We move together or not at all.</p>
+                        <p class="value-scripture">"How good and pleasant it is when God's people live in unity." — Psalm 133:1</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- THE CHILDREN -->
+        <section class="section section--children" id="children">
+            <div class="container container--narrow">
+                <div class="section-head reveal">
+                    <span class="chapter">IV</span>
+                    <p class="eyebrow">Raised, Not Merely Grown</p>
+                    <h2 class="section-title">The Children We Will Raise</h2>
+                    <p class="section-sub">Before they arrive, we are already building the home they will call theirs — stone by stone, prayer by prayer.</p>
+                </div>
+
+                <div class="pillars">
+                    <article class="pillar reveal">
+                        <span class="pillar-num">i.</span>
+                        <h3 class="pillar-title">Raised in the Ways of God</h3>
+                        <p class="pillar-body">Faith will not be an inheritance of habit but a living thing — taught at the table, practiced in the everyday, anchored in the Word. They will know Christ before they know the world.</p>
+                    </article>
+                    <article class="pillar reveal">
+                        <span class="pillar-num">ii.</span>
+                        <h3 class="pillar-title">Rooted in Identity</h3>
+                        <p class="pillar-body">They will know who they are and where they come from. They will carry the name Ndekei not as a weight but as a blessing — a story written before them, to be carried further by them.</p>
+                    </article>
+                    <article class="pillar reveal">
+                        <span class="pillar-num">iii.</span>
+                        <h3 class="pillar-title">Disciplined in Mind, Body &amp; Spirit</h3>
+                        <p class="pillar-body">Educated deeply and widely. Strong in body and stewardship. Unafraid of hard work, hard questions, and hard truths. We are raising people of substance — not just performance.</p>
+                    </article>
+                    <article class="pillar reveal">
+                        <span class="pillar-num">iv.</span>
+                        <h3 class="pillar-title">Formed to Love &amp; to Lead</h3>
+                        <p class="pillar-body">We will model love before we demand it, and lead by serving. Our children will leave this home able to build homes of their own — full of faith, craft, and quiet dignity.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE ROAD -->
+        <section class="section section--road" id="road">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="chapter">V</span>
+                    <p class="eyebrow">Stone by Stone</p>
+                    <h2 class="section-title">The Road Ahead</h2>
+                    <p class="section-sub">What we are building now, and what we are building for the long arc.</p>
+                </div>
+
+                <div class="road-grid">
+                    <article class="road-col reveal">
+                        <p class="road-label"><span class="road-dot"></span> Near — the coming years</p>
+                        <ul class="road-list">
+                            <li><span>Disgustingly educated</span><em>Degrees, depth, and a broad grasp of the world worth knowing.</em></li>
+                            <li><span>A beautiful home</span><em>A place that feels like us — crafted, cared for, and full of life.</em></li>
+                            <li><span>Foundations of wealth</span><em>Disciplined saving, deliberate investing, no shortcuts.</em></li>
+                            <li><span>Health &amp; vitality</span><em>Strong bodies, sharp minds, rested spirits — the long game starts here.</em></li>
+                            <li><span>Deep friendships</span><em>A circle that sharpens us and points us back to Him.</em></li>
+                        </ul>
+                    </article>
+
+                    <article class="road-col reveal">
+                        <p class="road-label"><span class="road-dot"></span> Far — the long arc</p>
+                        <ul class="road-list">
+                            <li><span>A portfolio of real estate</span><em>Land, homes, and places that outlast us.</em></li>
+                            <li><span>Generational wealth</span><em>Not for luxury — for leverage, for giving, for freedom to answer God's call.</em></li>
+                            <li><span>Children raised in the faith</span><em>Launched into the world ready, rooted, and unafraid.</em></li>
+                            <li><span>Work that mattered</span><em>A body of craft that made life better for real people.</em></li>
+                            <li><span>A world more beautiful</span><em>For having passed through it — quieter, kinder, a little more honest.</em></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEGACY / LETTER -->
+        <section class="section section--legacy" id="legacy">
+            <div class="container container--narrow">
+                <div class="section-head reveal">
+                    <span class="chapter">VI</span>
+                    <p class="eyebrow">A Covenant, Not a Souvenir</p>
+                    <h2 class="section-title">To Our Children</h2>
+                </div>
+
+                <article class="letter reveal">
+                    <p class="letter-salutation">Our dear children,</p>
+                    <p>Before you knew the world, we knew of you. Before you bore our name, we were already building a home for you — stone by stone, prayer by prayer, dream by dream.</p>
+                    <p>This page is not a keepsake. It is a <em>covenant</em>. We write it now so that, years from today, when the world asks who you are, you will have your answer ready.</p>
+                    <p>You are a Ndekei. You are loved. You are known. You are set apart — not by what you own, but by Whom you serve.</p>
+                    <p>We will raise you in the way of the Lord — not because it is tradition, but because it is true. We will teach you to love as we have been loved, to work with craft, to speak with honesty, and to carry yourself with the quiet dignity of those who know where they come from.</p>
+                    <p>When you fall, come home. When you rise, come home. This house will always be a place where God is at the center, where love is the language we speak, and where your name will always mean something.</p>
+                    <p>We are praying for you already.</p>
+                    <p class="letter-signoff">With everything we are,</p>
+                    <p class="letter-signature">Your mother and father<br><span>Lisa &amp; Victor Ndekei</span><br><span class="letter-place">Nairobi · 2026</span></p>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAMILY TREE -->
+        <section class="section section--tree" id="tree">
+            <div class="container container--narrow">
+                <div class="section-head reveal">
+                    <span class="chapter">VII</span>
+                    <p class="eyebrow">The Tree That Grows</p>
+                    <h2 class="section-title">Our Family Tree</h2>
+                    <p class="section-sub">A scaffold to carry the names, years, and stories yet to come.</p>
+                </div>
+
+                <div class="tree reveal">
+                    <div class="tree-row tree-row--parents">
+                        <div class="tree-node">
+                            <p class="tree-name">Victor Ndekei</p>
+                            <p class="tree-meta">b. ——</p>
+                        </div>
+                        <span class="tree-and">&</span>
+                        <div class="tree-node">
+                            <p class="tree-name">Lisa Ndekei</p>
+                            <p class="tree-meta">b. ——</p>
+                        </div>
+                    </div>
+                    <p class="tree-union">Joined in covenant · MMXXIII · Nairobi</p>
+
+                    <div class="tree-branch">
+                        <span class="tree-line"></span>
+                        <div class="tree-row tree-row--children">
+                            <div class="tree-node tree-node--future"><p class="tree-name">—</p><p class="tree-meta">Child, to come</p></div>
+                            <div class="tree-node tree-node--future"><p class="tree-name">—</p><p class="tree-meta">Child, to come</p></div>
+                            <div class="tree-node tree-node--future"><p class="tree-name">—</p><p class="tree-meta">Child, to come</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLOSING -->
+        <section class="closing">
+            <div class="container container--narrow reveal">
+                <svg class="closing-crest" viewBox="0 0 400 400" width="72" height="72" aria-hidden="true">
+                    <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="200" cy="200" r="184"/>
+                        <line x1="165" y1="180" x2="165" y2="290"/>
+                        <line x1="235" y1="180" x2="235" y2="290"/>
+                        <line x1="165" y1="180" x2="235" y2="290"/>
+                        <line x1="200" y1="80" x2="200" y2="110"/>
+                        <line x1="185" y1="95" x2="215" y2="95"/>
+                    </g>
+                </svg>
+                <p class="closing-verse">
+                    "Now to Him who is able to do immeasurably more than all we ask or imagine, according to His power that is at work within us…"
+                </p>
+                <cite class="closing-cite">— Ephesians 3:20</cite>
+                <p class="closing-line">The Ndekei Family · Nairobi · Est. MMXXIII</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© MMXXIII — ∞ · The Ndekei Family</p>
+            <p><a href="../index.html">Portfolio</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
