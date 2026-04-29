@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hidden Cost of Design Debt — Victor Ndekei</title>
+    <meta name="description" content="Design debt doesn't break the build. It breaks the experience — and then it breaks the team.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grain-overlay"></div>
+
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">
+                <svg class="logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                    <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                    <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                    <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                </svg>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#work" class="nav-link">Work</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="notes.html" class="nav-link nav-link--secondary nav-link--active">Notes</a>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary">
+                    <span>Book a Call</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-links">
+            <li><a href="index.html#work" class="mobile-link">Work</a></li>
+            <li><a href="index.html#about" class="mobile-link">About</a></li>
+            <li><a href="notes.html" class="mobile-link">Notes</a></li>
+        </ul>
+        <div class="mobile-actions">
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </div>
+        <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary btn--full">
+            <span>Book a Call</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+    </div>
+
+    <main class="note-page-main">
+        <div class="note-page-container">
+
+            <a href="notes.html" class="note-back">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 4l-4 4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Notes
+            </a>
+
+            <time class="note-page-date">Feb 03, 2026</time>
+            <h1 class="note-page-title">The Hidden Cost of Design Debt</h1>
+
+            <article class="note-article">
+
+                <p class="note-lead">Debt is borrowed time. You solve a problem today by pushing the cost into the future, and the future always collects. Technical debt gets a lot of attention in engineering. There are frameworks for measuring it, sprints for paying it down, architectural reviews for preventing it. Design debt gets much less scrutiny. It's harder to quantify, slower to accumulate visibly, and easier to dismiss as an aesthetic concern rather than a structural one. But design debt is often more damaging. Because it operates at the layer of human experience, not machine logic.</p>
+
+                <h2>What design debt actually is</h2>
+
+                <p>It's not inconsistency. Inconsistency is the symptom. The cause is undocumented decisions.</p>
+
+                <p>Every time a designer makes a choice that isn't captured somewhere — a slightly off blue, a one-off component, an interaction pattern that works on this screen but contradicts something three flows away — they create a small branch in the decision tree. If it's deliberate and documented, it might be a valid exception. If it isn't, it's debt.</p>
+
+                <p>The problem isn't the individual decision. It's that each undocumented decision makes the next designer's job harder. They encounter the inconsistency and have three options: follow it and propagate the error, fix it locally and create a different inconsistency, or flag it and slow everything down. None of these is good. All of them cost something.</p>
+
+                <h2>Where it accumulates</h2>
+
+                <p>Design debt doesn't appear in sprint reports. It shows up as slowness. Decisions taking longer because the environment is inconsistent. Engineering taking longer because components can't be reused. QA taking longer because expected behaviour is ambiguous. Users feel it as friction, that slightly-off quality of a product that wasn't built by a single coherent mind. They can't name what's wrong. They just feel it.</p>
+
+                <p>It accumulates in predictable conditions: deadline pressure, unclear ownership, poor handoff, no living design system, and the most insidious one — no explicit agreement on what the standard actually is.</p>
+
+                <p>I've watched it happen. A component built quickly for one screen, never abstracted. Months later a different designer needs something similar, doesn't find it, builds something slightly different. Now there are two. Then four. Then the pattern is scattered across the whole product and every new screen becomes an act of improvisation.</p>
+
+                <h2>The entropy principle</h2>
+
+                <p>Systems tend toward disorder. Left unattended, complexity moves toward noise. This isn't a failure of any individual. It's the nature of how complex things evolve over time.</p>
+
+                <blockquote>
+                    <p>Design debt is entropy. It's what happens when maintaining coherence isn't explicitly resourced. And this reframes the question. Not "who made this mess?" but "what practices keep the system coherent as it grows?"</p>
+                </blockquote>
+
+                <p>The answer isn't perfectionism. Trying to get every decision right the first time produces paralysis and rigidity. The answer is legibility. Making decisions visible, documented, revisitable. A decision that's recorded can be evaluated and changed. A decision that lives only in someone's memory, or in the implicit patterns of a file no one's touched in eight months, is already debt.</p>
+
+                <h2>The team cost</h2>
+
+                <p>The most underestimated impact of design debt is on the people doing the work.</p>
+
+                <p>An inconsistent, undocumented design environment is demoralising. It creates constant cognitive friction — every decision requires re-solving problems that should already be solved. It erodes confidence in the product and, eventually, in the team's ability to build anything well.</p>
+
+                <p>I've worked in environments where even simple questions required investigation. What font size should this label be? What's the standard spacing between these sections? That's not a team that cares too much about detail. That's a team working inside a system that failed to preserve its own decisions.</p>
+
+                <p>Paying down design debt isn't glamorous. It doesn't make portfolios. But it's some of the most leveraged work a design team can do, because the returns compound forward just like the debt did — except now in the right direction. Every new screen is faster to design, more consistent to build, cleaner for the user.</p>
+
+                <p>The best teams I've encountered treat coherence as infrastructure. Not something you build once but something you tend, the way a craftsperson tends their tools.</p>
+
+            </article>
+
+            <div class="note-page-footer">
+                <a href="note-mba-design.html" class="note-nav-link">
+                    <span class="note-nav-label">← Previous</span>
+                    <span class="note-nav-title">What an MBA Is Teaching Me About Design</span>
+                </a>
+                <a href="note-trust-finance.html" class="note-nav-link note-nav-link--next">
+                    <span class="note-nav-label">Next →</span>
+                    <span class="note-nav-title">Designing for Trust in Financial Products</span>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <svg class="footer-logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                        <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                        <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                        <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                    </svg>
+                    <p class="footer-tagline">Crafting digital experiences that make a difference.</p>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Navigation</h4>
+                        <ul>
+                            <li><a href="index.html#work">Work</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="notes.html">Notes</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Connect</h4>
+                        <ul>
+                            <li><a href="https://dribbble.com/Ndekei" target="_blank">Dribbble</a></li>
+                            <li><a href="https://medium.com/@victorndekei" target="_blank">Medium</a></li>
+                            <li><a href="https://linkedin.com/in/victorndekei" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/victorndekei" target="_blank">Twitter / X</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Get in Touch</h4>
+                        <ul>
+                            <li><a href="https://cal.com/victorndekei/15min" target="_blank">Book a Call</a></li>
+                            <li><a href="mailto:hello@victorndekei.com">Email Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 Victor Ndekei. All rights reserved.</p>
+                <p class="footer-credit">Designed & crafted with ♥</p>
+            </div>
+        </div>
+        <div class="footer-giant-text" aria-hidden="true"><span>VICTOR NDEKEI</span></div>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>

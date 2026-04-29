@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designing for Trust in Financial Products — Victor Ndekei</title>
+    <meta name="description" content="Trust in financial UX is not a feature. It is the operating environment. You either have it or you don't.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grain-overlay"></div>
+
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">
+                <svg class="logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                    <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                    <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                    <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                </svg>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#work" class="nav-link">Work</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="notes.html" class="nav-link nav-link--secondary nav-link--active">Notes</a>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary">
+                    <span>Book a Call</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-links">
+            <li><a href="index.html#work" class="mobile-link">Work</a></li>
+            <li><a href="index.html#about" class="mobile-link">About</a></li>
+            <li><a href="notes.html" class="mobile-link">Notes</a></li>
+        </ul>
+        <div class="mobile-actions">
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </div>
+        <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary btn--full">
+            <span>Book a Call</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+    </div>
+
+    <main class="note-page-main">
+        <div class="note-page-container">
+
+            <a href="notes.html" class="note-back">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 4l-4 4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Notes
+            </a>
+
+            <time class="note-page-date">Jan 17, 2026</time>
+            <h1 class="note-page-title">Designing for Trust in Financial Products</h1>
+
+            <article class="note-article">
+
+                <p class="note-lead">Trust in a financial product is not a feature. It's the condition under which everything else is possible. Without it, the most sophisticated platform, the most elegant interface, the most seamless flow — none of it works. People just won't engage deeply with a product they don't trust. I live inside this problem every day.</p>
+
+                <p>Designing for millions of people who have placed their financial lives in the hands of a digital product — their savings, their salaries, their security — carries a weight that I don't think fully normalises. I'm not sure it should. That weight is important information about what this work actually requires.</p>
+
+                <h2>Why financial UX is different</h2>
+
+                <p>In most products, a confusing UI is a usability problem. You identify it, fix it, move on. In financial products, a confusing UI is a trust problem. Trust problems don't resolve the same way.</p>
+
+                <p>The category creates a context where every ambiguous state, every unclear error message, every moment of hesitation in an interface gets interpreted through anxiety. Money isn't neutral. It carries fear — of loss, of scarcity, of things going wrong in ways you can't undo. When someone initiates a transfer and the screen goes quiet, they don't think "network latency." They think: did that go through? Did I just lose that?</p>
+
+                <p>The interface has to manage not just the technical state of a transaction but the emotional state of the person executing it. That's a different kind of design problem. It requires designing for fear as a baseline condition, not an edge case.</p>
+
+                <h2>Three things trust actually requires</h2>
+
+                <p>After years in this space, I've reduced it to three things. Simple to name, hard to do consistently at scale.</p>
+
+                <p>The first is consistency. The product behaves the same way every time. Same action, same result. Same visual pattern, same meaning. Trust is built through repetition of reliable experience. Every time an interface surprises someone, there's a small erosion. Those small erosions compound.</p>
+
+                <p>The second is clarity. The product never asks the user to resolve ambiguity. "Are you sure?" is a weak confirmation. "You are sending KES 50,000 to Jane Doe (Equity Bank · 0712 345 678). This cannot be reversed." That's clarity. The user knows exactly what's happening. More words, but far more trust.</p>
+
+                <p>The third is predictability. The user can form an accurate mental model of how the product works. They can anticipate what comes next. This is different from consistency — a product can be consistently unpredictable. Predictability means the product's behaviour maps accurately to how the user understands money to work in the real world.</p>
+
+                <h2>The patterns that signal safety</h2>
+
+                <p>Some of this is visual. Clean, uncluttered interfaces signal control. Dense layouts signal complexity and therefore risk. Whitespace around important actions — a transfer confirmation, a warning — gives those actions the right weight. This isn't minimalism as an aesthetic preference. It's minimalism as communication.</p>
+
+                <p>Some is structural. Safety signals need to arrive before the moment of anxiety, not after. The user about to confirm a large transaction needs to have already felt safe. Reassurance that arrives after the fact does very little.</p>
+
+                <blockquote>
+                    <p>And some is language. Financial product copy is usually terrible — inherited from legal teams, full of passive voice and jargon. Every piece of text should be written for someone who is slightly anxious, not for a compliance officer. "Transaction processed" is cold. "Your payment was sent successfully" is human. Same information. Different experience.</p>
+                </blockquote>
+
+                <h2>Trust as a covenant</h2>
+
+                <p>I keep coming back to this distinction: trust is not a transaction. A transaction is exchanged and done. Trust is a covenant — ongoing, renewed continuously through behaviour.</p>
+
+                <p>Financial products ask users for something serious. Trust us with your money, your financial identity, your livelihood. That's a significant thing to ask. The design of those products has to honour it at every touchpoint, without exception, every single time.</p>
+
+                <p>The asymmetry is severe. Building trust is slow — dozens of consistent positive experiences over months. Losing it can happen in one moment. One failed transaction with an unclear error. One flow that made someone doubt whether they'd made a mistake. One moment where the product felt outside their control.</p>
+
+                <p>There are no minor trust failures in financial UX. There's just the broken covenant, and the quiet exit that follows.</p>
+
+            </article>
+
+            <div class="note-page-footer">
+                <a href="note-design-debt.html" class="note-nav-link">
+                    <span class="note-nav-label">← Previous</span>
+                    <span class="note-nav-title">The Hidden Cost of Design Debt</span>
+                </a>
+                <a href="note-when-to-stop.html" class="note-nav-link note-nav-link--next">
+                    <span class="note-nav-label">Next →</span>
+                    <span class="note-nav-title">On Knowing When to Stop Designing</span>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <svg class="footer-logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                        <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                        <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                        <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                    </svg>
+                    <p class="footer-tagline">Crafting digital experiences that make a difference.</p>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Navigation</h4>
+                        <ul>
+                            <li><a href="index.html#work">Work</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="notes.html">Notes</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Connect</h4>
+                        <ul>
+                            <li><a href="https://dribbble.com/Ndekei" target="_blank">Dribbble</a></li>
+                            <li><a href="https://medium.com/@victorndekei" target="_blank">Medium</a></li>
+                            <li><a href="https://linkedin.com/in/victorndekei" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/victorndekei" target="_blank">Twitter / X</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Get in Touch</h4>
+                        <ul>
+                            <li><a href="https://cal.com/victorndekei/15min" target="_blank">Book a Call</a></li>
+                            <li><a href="mailto:hello@victorndekei.com">Email Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 Victor Ndekei. All rights reserved.</p>
+                <p class="footer-credit">Designed & crafted with ♥</p>
+            </div>
+        </div>
+        <div class="footer-giant-text" aria-hidden="true"><span>VICTOR NDEKEI</span></div>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>
