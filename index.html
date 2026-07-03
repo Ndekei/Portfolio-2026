@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Ndekei — Senior Product Designer</title>
+    <meta name="description" content="Victor Ndekei is a Senior Product Designer leading Retail Design at Co-op Bank. Crafting cutting-edge digital product experiences for innovative brands.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="#" class="nav-logo">
+                <svg class="logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                    <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                    <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                    <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                </svg>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#life" class="nav-link">Life</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="notes.html" class="nav-link nav-link--secondary">Notes</a>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary">
+                    <span>Book a Call</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-links">
+            <li><a href="#work" class="mobile-link">Work</a></li>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#life" class="mobile-link">Life</a></li>
+            <li><a href="notes.html" class="mobile-link">Notes</a></li>
+        </ul>
+        <div class="mobile-actions">
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </div>
+        <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary btn--full">
+            <span>Book a Call</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-badge reveal-up">
+                <span class="badge-dot"></span>
+                <span>Available for new projects</span>
+            </div>
+            <h1 class="hero-title reveal-up">
+                <span class="hero-line">I craft cutting-edge</span>
+                <span class="hero-line">digital product</span>
+                <span class="hero-line hero-line--accent">experiences<span class="hero-dot">.</span></span>
+            </h1>
+            <p class="hero-subtitle reveal-up">
+                Senior Product Designer leading Retail Design at Co-op Bank, merging deep user empathy with the sharp business acumen I'm honing in my MBA program at the University of Salford.
+            </p>
+            <div class="hero-ctas reveal-up">
+                <a href="#work" class="btn btn--large btn--primary">
+                    <span>View My Work</span>
+                    <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--large btn--outline">
+                    <span>Let's Talk</span>
+                </a>
+            </div>
+            <div class="hero-stats reveal-up">
+                <div class="stat">
+                    <div class="stat-value">
+                        <span class="stat-number" data-target="6">0</span><span class="stat-suffix">+</span>
+                    </div>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <div class="stat-value">
+                        <span class="stat-number" data-target="1">0</span><span class="stat-suffix">M+</span>
+                    </div>
+                    <span class="stat-label">Users Impacted</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <div class="stat-value">
+                        <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
+                    </div>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-section">
+        <div class="marquee">
+            <div class="marquee-track">
+                <span class="marquee-item">Product Design</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">UX Strategy</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">Mobile Apps</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">Web Experiences</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">Design Systems</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">User Research</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">Prototyping</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">Product Design</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">UX Strategy</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">Mobile Apps</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">Web Experiences</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">Design Systems</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">User Research</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">Prototyping</span>
+                <span class="marquee-sep">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Work -->
+    <section class="work-section" id="work">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-label">Featured Work</span>
+                <h2 class="section-title">Selected <br>case studies</h2>
+                <div class="projects-grid">
+                <!-- Fedha App -->
+                <article class="project-card reveal-up" id="project-fedha">
+                    <div class="project-card-image">
+                        <img src="images/Fedha-Mac.png" alt="Fedha App - Budgeting Tool" loading="lazy">
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-title">Fedha App - Budgeting Tool</h3>
+                        <p class="project-desc">Take control of your finances with an AI-driven budgeting tool. Track spending, visualize cash flow through intuitive charts, and unlock smart insights to optimize your investments and accelerate savings.</p>
+                        <div class="project-links">
+                            <a href="https://fedha-app.vercel.app/" target="_blank" class="project-link project-link--external">Visit Live Site <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 1 -->
+                <article class="project-card reveal-up" id="project-coop-login">
+                    <div class="project-card-image">
+                        <img src="images/project-coop-login.jpg" alt="Co-op Bank Login Redesign" loading="lazy">
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-title">Redesigning the Co-op Bank Login Page</h3>
+                        <p class="project-desc">Transforming the highest traffic screen into a powerful conversion engine and self-service hub for 9.5 million customers.</p>
+                        <div class="project-links">
+                            <a href="coop-login.html" class="project-link">Read Case Study <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                            <a href="https://apps.apple.com/ke/app/co-op-bank-app/id6742747415" target="_blank" class="project-link project-link--external">Download App <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card reveal-up" id="project-coop-web">
+                    <div class="project-card-image">
+                        <img src="images/project-coop-web.jpg" alt="Co-op Bank Web Experience" loading="lazy">
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-title">Transforming Internet Banking</h3>
+                        <p class="project-desc">I designed a next-gen internet banking platform that simplifies complex banking into a clean, intuitive and responsive interface. Manage cards, pay beneficiaries, view detailed statements and track your spending with unparalleled ease.</p>
+                        <div class="project-links">
+                            <a href="coopbank-web.html" class="project-link">Read Case Study <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card reveal-up" id="project-k24">
+                    <div class="project-card-image">
+                        <img src="images/project-k24.jpg" alt="K24 Plus Mobile App" loading="lazy">
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-title">K24 Plus Mobile App</h3>
+                        <p class="project-desc">Led the end-to-end Research and Design for K24 Plus, a content aggregation platform that scaled to over 1 million users.</p>
+                        <div class="project-links">
+                            <a href="k24plus.html" class="project-link">Read Case Study <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card reveal-up" id="project-1health">
+                    <div class="project-card-image">
+                        <img src="images/Vita-cover.png" alt="Global Insurance Website - Vita Virtues" loading="lazy">
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-title">Global Insurance Website</h3>
+                        <p class="project-desc">I designed a next-gen internet banking platform that simplifies complex banking into a clean, intuitive and responsive interface. Manage cards, pay beneficiaries, view detailed statements and track your spending with unparalleled ease.</p>
+                        <div class="project-links">
+                            <a href="https://vita-virtues.vercel.app/#" target="_blank" class="project-link project-link--external">View Live Site <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card reveal-up" id="project-airone">
+                    <div class="project-card-image">
+                        <img src="images/project-airone.jpg" alt="AirOne Flight Booking" loading="lazy">
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-title">AirOne — Flight Booking Flow</h3>
+                        <p class="project-desc">Capstone project executing a complete product design cycle for an intuitive flight booking experience.</p>
+                        <div class="project-links">
+                            <a href="airone.html" class="project-link">Read Case Study <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article class="project-card reveal-up" id="project-urbanswap">
+                    <div class="project-card-image">
+                        <img src="images/project-urbanswap.jpg" alt="UrbanSwap Website" loading="lazy">
+                    </div>
+                    <div class="project-card-content">
+                        <h3 class="project-title">UrbanSwap Website</h3>
+                        <p class="project-desc">Website redesign for an innovative e-mobility platform transforming urban transportation in Kenya.</p>
+                        <div class="project-links">
+                            <a href="https://swapurban.framer.website/" target="_blank" class="project-link project-link--external">View Live Site <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </article>
+            </div>   </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-left reveal-up">
+                    <span class="section-label">About Me</span>
+                    <h2 class="section-title">Designing with <br>purpose & <br><span class="text-gradient">precision.</span></h2>
+                </div>
+                <div class="about-right reveal-up">
+                    <p class="about-text about-text--lead">
+                        I'm Victor Ndekei — a Senior Product Designer who believes that exceptional design is the intersection of empathy, strategy, and craft.
+                    </p>
+                    <p class="about-text">
+                        Currently leading Retail Design at Co-operative Bank of Kenya, I shape digital experiences that serve millions of users. My work spans the full spectrum — from deep user research and UX strategy to high-fidelity interfaces and design systems.
+                    </p>
+                    <p class="about-text">
+                        I'm simultaneously sharpening my business lens through an MBA at the University of Salford, ensuring every design decision I make is rooted in both user needs and business reality.
+                    </p>
+                    <div class="about-capabilities">
+                        <h3 class="capabilities-title">Core Capabilities</h3>
+                        <div class="capabilities-grid">
+                            <div class="capability">
+                                <div class="capability-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span>Product Design</span>
+                            </div>
+                            <div class="capability">
+                                <div class="capability-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span>UX Strategy</span>
+                            </div>
+                            <div class="capability">
+                                <div class="capability-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span>Mobile Design</span>
+                            </div>
+                            <div class="capability">
+                                <div class="capability-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span>Web Experiences</span>
+                            </div>
+                            <div class="capability">
+                                <div class="capability-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span>Design Systems</span>
+                            </div>
+                            <div class="capability">
+                                <div class="capability-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span>User Research</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-label">My Process</span>
+                <h2 class="section-title">How I bring ideas <br>to life</h2>
+            </div>
+            <div class="process-grid">
+                <div class="process-card reveal-up">
+                    <span class="process-number">01</span>
+                    <h3 class="process-title">Discover</h3>
+                    <p class="process-desc">Deep-dive into user needs, business goals, and market context to define the problem space clearly.</p>
+                </div>
+                <div class="process-card reveal-up">
+                    <span class="process-number">02</span>
+                    <h3 class="process-title">Define</h3>
+                    <p class="process-desc">Synthesize research into actionable insights, user flows, and information architecture.</p>
+                </div>
+                <div class="process-card reveal-up">
+                    <span class="process-number">03</span>
+                    <h3 class="process-title">Design</h3>
+                    <p class="process-desc">Craft high-fidelity interfaces with meticulous attention to detail, interaction design, and visual systems.</p>
+                </div>
+                <div class="process-card reveal-up">
+                    <span class="process-number">04</span>
+                    <h3 class="process-title">Deliver</h3>
+                    <p class="process-desc">Collaborate with engineering, iterate based on testing, and ensure pixel-perfect implementation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="faq-grid">
+                <div class="faq-left reveal-up">
+                    <span class="section-label">FAQ</span>
+                    <h2 class="section-title">Questions? <br><span class="text-gradient">Answered.</span></h2>
+                    <p class="faq-subtext">Everything you need to know before we start working together.</p>
+                </div>
+                <div class="faq-right">
+                    <div class="faq-item reveal-up" id="faq-1">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                            <span>How do we get started?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-1">
+                            <p>It starts with a conversation. Book a 15-minute call where we'll discuss your project goals, timeline, and how I can bring value. From there, I'll put together a tailored proposal and we'll hit the ground running.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal-up" id="faq-2">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+                            <span>What's your typical timeline for a project?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-2">
+                            <p>Timelines vary based on scope and complexity. A typical product design engagement ranges from 4-12 weeks. During our initial call, I'll give you a realistic timeline based on your specific needs.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal-up" id="faq-3">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+                            <span>What tools and software do you use?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-3">
+                            <p>My primary toolkit includes Figma for design and prototyping, FigJam for collaboration, Maze and Hotjar for user testing, and various analytics tools. I'm tool-agnostic and adapt to whatever serves the project best.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal-up" id="faq-4">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+                            <span>Do you work with international clients?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-4">
+                            <p>Absolutely. I've collaborated with teams across different time zones and cultures. My MBA at the University of Salford has further strengthened my ability to work in global, distributed environments.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal-up" id="faq-5">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+                            <span>Can you work with our existing design team?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-5">
+                            <p>Yes — I thrive in collaborative environments. Whether it's augmenting your in-house team, leading a design workstream, or mentoring junior designers, I integrate seamlessly and elevate the overall design output.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card reveal-up">
+                <h2 class="cta-title">Let's create something <br><span class="text-gradient">extraordinary</span> together.</h2>
+                <p class="cta-desc">Have a project in mind? I'd love to hear about it. Let's discuss how design can drive real impact for your business.</p>
+                <div class="cta-buttons">
+                    <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--large btn--primary">
+                        <span>Book a Call</span>
+                        <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="mailto:hello@victorndekei.com" class="btn btn--large btn--outline">
+                        <span>Send an Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Life / Beyond the Work Section -->
+    <section class="life-section" id="life">
+        <div class="container">
+            <div class="section-header section-header--center reveal-up">
+                <span class="section-label">Beyond the Work</span>
+                <h2 class="section-title">The life behind <br>the <span class="text-gradient">work.</span></h2>
+                <p class="section-desc life-desc">Design is how I make a living — but these are the people, places and passions that make me. A pile of unpolished moments from a life lived fully offscreen. Give one a nudge.</p>
+            </div>
+
+            <!-- The Pile: scattered, overlapping printed photos.
+                 Per-photo angle/width/aspect live in style.css (.pile-photo:nth-child). -->
+            <div class="pile" id="pile">
+                <figure class="pile-photo">
+                    <img src="images/personal/portrait-victor.jpg" alt="Victor Ndekei seated against a green velvet backdrop" class="pile-photo-img" loading="lazy">
+                    <figcaption class="pile-photo-caption">Me, when the laptop closes</figcaption>
+                </figure>
+                <figure class="pile-photo">
+                    <img src="images/personal/golden-drive.jpg" alt="Aerial view of a car on a tree-lined country road at golden hour" class="pile-photo-img" loading="lazy">
+                    <figcaption class="pile-photo-caption">Chasing the golden hour</figcaption>
+                </figure>
+                <figure class="pile-photo">
+                    <img src="images/personal/wife.jpg" alt="Portrait of my wife" class="pile-photo-img" loading="lazy">
+                    <figcaption class="pile-photo-caption">My favourite person</figcaption>
+                </figure>
+                <figure class="pile-photo">
+                    <img src="images/personal/charity-run.jpg" alt="Victor at the Blue Ribbon charity walk and run" class="pile-photo-img" loading="lazy">
+                    <figcaption class="pile-photo-caption">Showing up for the cause</figcaption>
+                </figure>
+                <figure class="pile-photo">
+                    <img src="images/personal/longonot.jpg" alt="Standing at the rim of a green volcanic crater" class="pile-photo-img" loading="lazy">
+                    <figcaption class="pile-photo-caption">Longonot — worth every step</figcaption>
+                </figure>
+                <figure class="pile-photo">
+                    <img src="images/personal/tea-country.jpg" alt="Aerial view of lush green Kenyan tea fields" class="pile-photo-img" loading="lazy">
+                    <figcaption class="pile-photo-caption">Home is this shade of green</figcaption>
+                </figure>
+                <figure class="pile-photo">
+                    <img src="images/personal/morning-road.jpg" alt="A wide open road under big highland skies" class="pile-photo-img" loading="lazy">
+                    <figcaption class="pile-photo-caption">Highland mornings, wide open</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <svg class="footer-logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                        <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                        <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                        <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                    </svg>
+                    <p class="footer-tagline">Crafting digital experiences that make a difference.</p>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Navigation</h4>
+                        <ul>
+                            <li><a href="#work">Work</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#life">Life</a></li>
+                            <li><a href="notes.html">Notes</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Connect</h4>
+                        <ul>
+                            <li><a href="https://dribbble.com/Ndekei" target="_blank">Dribbble</a></li>
+                            <li><a href="https://medium.com/@victorndekei" target="_blank">Medium</a></li>
+                            <li><a href="https://linkedin.com/in/victorndekei" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/victorndekei" target="_blank">Twitter / X</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Get in Touch</h4>
+                        <ul>
+                            <li><a href="https://cal.com/victorndekei/15min" target="_blank">Book a Call</a></li>
+                            <li><a href="mailto:hello@victorndekei.com">Email Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 Victor Ndekei. All rights reserved.</p>
+                <p class="footer-credit">Designed & crafted with ♥</p>
+            </div>
+        </div>
+        <div class="footer-giant-text" aria-hidden="true">
+            <span>VICTOR NDEKEI</span>
+        </div>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>

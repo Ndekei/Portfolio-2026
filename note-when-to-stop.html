@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Knowing When to Stop Designing — Victor Ndekei</title>
+    <meta name="description" content="Perfectionism and craft aren't the same thing. One is about control, the other is about respect for the work.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grain-overlay"></div>
+
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">
+                <svg class="logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                    <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                    <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                    <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                </svg>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#work" class="nav-link">Work</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="notes.html" class="nav-link nav-link--secondary nav-link--active">Notes</a>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary">
+                    <span>Book a Call</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-links">
+            <li><a href="index.html#work" class="mobile-link">Work</a></li>
+            <li><a href="index.html#about" class="mobile-link">About</a></li>
+            <li><a href="notes.html" class="mobile-link">Notes</a></li>
+        </ul>
+        <div class="mobile-actions">
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </div>
+        <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary btn--full">
+            <span>Book a Call</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+    </div>
+
+    <main class="note-page-main">
+        <div class="note-page-container">
+
+            <a href="notes.html" class="note-back">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 4l-4 4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Notes
+            </a>
+
+            <time class="note-page-date">Dec 05, 2025</time>
+            <h1 class="note-page-title">On Knowing When to Stop Designing</h1>
+
+            <article class="note-article">
+
+                <p class="note-lead">The hardest decision in design isn't what to create. It's when to stop. This sounds simple. It's not. Stopping requires a kind of surrender that every creative impulse resists. The work is never perfect. There's always something that could be sharper, more considered, pushed a little further. The gap between the design you have and the design you can imagine never fully closes. Learning to stop anyway is one of the things that separates a working designer from a mature one.</p>
+
+                <h2>Perfectionism and its disguises</h2>
+
+                <p>Perfectionism isn't the same as high standards. High standards are about the quality of thinking, the rigour of process, the care of craft. Perfectionism is about control. Specifically, the discomfort of releasing work into a world that will receive it imperfectly.</p>
+
+                <p>The designer who keeps iterating past the point of meaningful improvement isn't honouring the work. They're protecting themselves from the vulnerability of shipping. And this matters, because not shipping has real costs: the user who needed this and couldn't access it, the team that couldn't move forward, the opportunity to learn from the real world that never came.</p>
+
+                <p>I've learned to ask myself a question when I feel the pull to keep going: am I improving the design, or am I managing my anxiety about it? The answer is usually uncomfortable. It's almost always clarifying.</p>
+
+                <h2>Diminishing returns</h2>
+
+                <p>Every iteration has a return on investment. Early ones are enormous — moving from wireframe to layout, establishing hierarchy, getting the core flow right. Each pass changes the work materially.</p>
+
+                <p>But there's an inflection point. After a certain threshold, additional passes produce smaller and smaller improvements. Often imperceptible to anyone but the designer. The effort to move from 90 to 95 percent may equal the total effort that moved the work from nothing to 85.</p>
+
+                <blockquote>
+                    <p>The question isn't "could this be better?" It always could be. The question is whether you've reached the point of genuine readiness — and whether you're honest enough to act on that answer.</p>
+                </blockquote>
+
+                <p>Stopping at the right moment isn't a compromise. It's a judgment that requires experience, honesty, and the willingness to separate your ego from the work. That separation is one of the harder things in a design career.</p>
+
+                <h2>Shipping as a creative act</h2>
+
+                <p>Shipping is the most underrated design decision. The act of releasing a product — committing to a version and putting it in front of real people — is itself creative. It closes one loop and opens another, the only one that really matters: the feedback loop.</p>
+
+                <p>The design you ship isn't the final design. It's the design that gets to exist in the world and teach you things your imagination couldn't. Every iteration after shipping is more informed, more grounded, more useful than anything produced in isolation.</p>
+
+                <p>There's a concept in Japanese aesthetics called <em>wabi-sabi</em>, the beauty found in imperfection and impermanence. A perfectly finished object has a kind of sterility. The thing that has entered the world and bears the marks of its existence there has a richness that perfect anticipation can never produce. Shipped work has wabi-sabi. Work that never ships is just potential. Which is another name for nothing.</p>
+
+                <h2>What the work needs</h2>
+
+                <p>Knowing when to stop requires a different relationship to the work. More generous, less possessive. You're not the final judge of its value. The users are. Time is. The real world is.</p>
+
+                <p>Your job is to bring the work to genuine readiness. Not perfection, which is always just out of reach. Readiness — meaning it represents your best current thinking, addresses the real problem, and can survive contact with reality.</p>
+
+                <p>Anything past that is deferred courage.</p>
+
+                <p>The work will eventually ask you to let it go. The practice is learning to answer before it has to start demanding.</p>
+
+            </article>
+
+            <div class="note-page-footer">
+                <a href="note-trust-finance.html" class="note-nav-link">
+                    <span class="note-nav-label">← Previous</span>
+                    <span class="note-nav-title">Designing for Trust in Financial Products</span>
+                </a>
+                <a href="note-design-systems.html" class="note-nav-link note-nav-link--next">
+                    <span class="note-nav-label">Next →</span>
+                    <span class="note-nav-title">Why Design Systems Are Not Style Guides</span>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <svg class="footer-logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                        <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                        <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                        <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                    </svg>
+                    <p class="footer-tagline">Crafting digital experiences that make a difference.</p>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Navigation</h4>
+                        <ul>
+                            <li><a href="index.html#work">Work</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="notes.html">Notes</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Connect</h4>
+                        <ul>
+                            <li><a href="https://dribbble.com/Ndekei" target="_blank">Dribbble</a></li>
+                            <li><a href="https://medium.com/@victorndekei" target="_blank">Medium</a></li>
+                            <li><a href="https://linkedin.com/in/victorndekei" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/victorndekei" target="_blank">Twitter / X</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Get in Touch</h4>
+                        <ul>
+                            <li><a href="https://cal.com/victorndekei/15min" target="_blank">Book a Call</a></li>
+                            <li><a href="mailto:hello@victorndekei.com">Email Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 Victor Ndekei. All rights reserved.</p>
+                <p class="footer-credit">Designed & crafted with ♥</p>
+            </div>
+        </div>
+        <div class="footer-giant-text" aria-hidden="true"><span>VICTOR NDEKEI</span></div>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>

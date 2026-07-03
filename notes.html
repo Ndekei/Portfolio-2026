@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes — Victor Ndekei</title>
+    <meta name="description" content="Occasional writing on product design, creative process, and the work of building things that last.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">
+                <svg class="logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                    <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                    <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                    <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                </svg>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#work" class="nav-link">Work</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="notes.html" class="nav-link nav-link--secondary nav-link--active">Notes</a>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary">
+                    <span>Book a Call</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-links">
+            <li><a href="index.html#work" class="mobile-link">Work</a></li>
+            <li><a href="index.html#about" class="mobile-link">About</a></li>
+            <li><a href="notes.html" class="mobile-link">Notes</a></li>
+        </ul>
+        <div class="mobile-actions">
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </div>
+        <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary btn--full">
+            <span>Book a Call</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+    </div>
+
+    <!-- Notes Main -->
+    <main class="notes-main">
+        <div class="container">
+
+            <!-- Header -->
+            <div class="notes-header reveal-up">
+                <span class="section-label">Notes</span>
+                <h1 class="notes-title">Thoughts on design,<br>craft, and building.</h1>
+                <p class="notes-desc">Occasional writing on product design, creative process, and the work of building things that last.</p>
+            </div>
+
+            <!-- Notes List -->
+            <div class="notes-list">
+
+                <a href="note-problem-space.html" class="note-item reveal-up">
+                    <time class="note-date">Apr 28, 2026</time>
+                    <div class="note-body">
+                        <h2 class="note-title">Why I Always Start in the Problem Space</h2>
+                        <p class="note-excerpt">Jumping to solutions is the most common mistake in product design. Staying in the problem space longer — resisting the urge to open Figma — always produces better outcomes.</p>
+                    </div>
+                    <span class="note-arrow" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </a>
+
+                <a href="note-mba-design.html" class="note-item reveal-up">
+                    <time class="note-date">Mar 12, 2026</time>
+                    <div class="note-body">
+                        <h2 class="note-title">What an MBA Is Teaching Me About Design</h2>
+                        <p class="note-excerpt">A year into my MBA at Salford, I've started seeing design decisions differently — through a lens of business risk, resource allocation, and organisational behaviour. Here's what's changed.</p>
+                    </div>
+                    <span class="note-arrow" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </a>
+
+                <a href="note-design-debt.html" class="note-item reveal-up">
+                    <time class="note-date">Feb 03, 2026</time>
+                    <div class="note-body">
+                        <h2 class="note-title">The Hidden Cost of Design Debt</h2>
+                        <p class="note-excerpt">Technical debt gets all the attention. But design debt — inconsistent patterns, undocumented decisions, components built in isolation — quietly erodes product quality in ways that are harder to trace.</p>
+                    </div>
+                    <span class="note-arrow" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </a>
+
+                <a href="note-trust-finance.html" class="note-item reveal-up">
+                    <time class="note-date">Jan 17, 2026</time>
+                    <div class="note-body">
+                        <h2 class="note-title">Designing for Trust in Financial Products</h2>
+                        <p class="note-excerpt">Trust isn't earned through aesthetics. It's earned through consistency, clarity, and the absence of surprises. Lessons from designing digital banking experiences for millions of users.</p>
+                    </div>
+                    <span class="note-arrow" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </a>
+
+                <a href="note-when-to-stop.html" class="note-item reveal-up">
+                    <time class="note-date">Dec 05, 2025</time>
+                    <div class="note-body">
+                        <h2 class="note-title">On Knowing When to Stop Designing</h2>
+                        <p class="note-excerpt">Perfectionism and craft aren't the same thing. One is about control, the other is about respect for the work. Knowing the difference determines whether you ship or stall.</p>
+                    </div>
+                    <span class="note-arrow" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </a>
+
+                <a href="note-design-systems.html" class="note-item reveal-up">
+                    <time class="note-date">Nov 20, 2025</time>
+                    <div class="note-body">
+                        <h2 class="note-title">Why Design Systems Are Not Style Guides</h2>
+                        <p class="note-excerpt">A library of colours and components is not a design system. A design system is a shared language — a set of decisions your team doesn't have to make twice.</p>
+                    </div>
+                    <span class="note-arrow" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </a>
+
+            </div>
+            <!-- End Notes List -->
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <svg class="footer-logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                        <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                        <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                        <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                    </svg>
+                    <p class="footer-tagline">Crafting digital experiences that make a difference.</p>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Navigation</h4>
+                        <ul>
+                            <li><a href="index.html#work">Work</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#explorations">Explorations</a></li>
+                            <li><a href="index.html#faq">FAQ</a></li>
+                            <li><a href="notes.html">Notes</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Connect</h4>
+                        <ul>
+                            <li><a href="https://dribbble.com/Ndekei" target="_blank">Dribbble</a></li>
+                            <li><a href="https://medium.com/@victorndekei" target="_blank">Medium</a></li>
+                            <li><a href="https://linkedin.com/in/victorndekei" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/victorndekei" target="_blank">Twitter / X</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Get in Touch</h4>
+                        <ul>
+                            <li><a href="https://cal.com/victorndekei/15min" target="_blank">Book a Call</a></li>
+                            <li><a href="mailto:hello@victorndekei.com">Email Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 Victor Ndekei. All rights reserved.</p>
+                <p class="footer-credit">Designed & crafted with ♥</p>
+            </div>
+        </div>
+        <div class="footer-giant-text" aria-hidden="true">
+            <span>VICTOR NDEKEI</span>
+        </div>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>

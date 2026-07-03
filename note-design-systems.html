@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Design Systems Are Not Style Guides — Victor Ndekei</title>
+    <meta name="description" content="A style guide tells you what things look like. A design system tells you why — and that why is what scales.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grain-overlay"></div>
+
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">
+                <svg class="logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                    <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                    <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                    <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                </svg>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#work" class="nav-link">Work</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="notes.html" class="nav-link nav-link--secondary nav-link--active">Notes</a>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary">
+                    <span>Book a Call</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-links">
+            <li><a href="index.html#work" class="mobile-link">Work</a></li>
+            <li><a href="index.html#about" class="mobile-link">About</a></li>
+            <li><a href="notes.html" class="mobile-link">Notes</a></li>
+        </ul>
+        <div class="mobile-actions">
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </div>
+        <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary btn--full">
+            <span>Book a Call</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+    </div>
+
+    <main class="note-page-main">
+        <div class="note-page-container">
+
+            <a href="notes.html" class="note-back">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 4l-4 4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Notes
+            </a>
+
+            <time class="note-page-date">Nov 20, 2025</time>
+            <h1 class="note-page-title">Why Design Systems Are Not Style Guides</h1>
+
+            <article class="note-article">
+
+                <p class="note-lead">When most people say "design system," they mean style guide. A palette of colours. A library of components. A set of type scales. These things are useful. But they're not a design system. And the confusion causes real harm at scale.</p>
+
+                <p>A style guide answers: what do things look like? A design system answers: why? The second question is harder. It's also the only one that scales.</p>
+
+                <h2>Why the distinction matters</h2>
+
+                <p>Definitions determine what gets built and resourced. If a team believes their Figma library is a design system, they'll invest in the library and neglect everything that makes a system actually function: governance, decision documentation, contribution processes, the shared language that keeps design and engineering aligned.</p>
+
+                <p>The result is something I've seen repeatedly. A component library that looks complete but is functionally incomplete. Engineers can't use it reliably because the components aren't specified precisely enough. New designers can use the components but don't understand the reasoning behind them, so they build exceptions instead of extensions. The system exists. It doesn't work as a system.</p>
+
+                <h2>Three layers, not one</h2>
+
+                <p>A real design system operates across three layers, all equally important.</p>
+
+                <p>The first is decisions. Not just "use this colour for interactive elements" but why. What does it communicate? Why is it appropriate for this audience? What happens when that rationale shifts? Without this layer, the system can't evolve coherently. The next designer has no way to know whether a new decision fits or contradicts something.</p>
+
+                <p>The second is patterns — components and their behaviour, fully documented. Not just "here is a button" but every meaningful state: default, hover, focus, active, disabled, loading, error, success. And why each state looks and behaves the way it does. Most component libraries are missing two-thirds of this. Which is why they're libraries, not systems.</p>
+
+                <p>The third is governance. Who owns it. How decisions get made. How contributions are reviewed. How the system evolves as the product does. Almost every team completely skips this layer. It's also the layer whose absence causes design systems to quietly die.</p>
+
+                <h2>The language it creates</h2>
+
+                <p>When a design system is working, it creates a shared language between design and engineering. A designer says "Card component, medium variant, with action footer" and an engineer knows exactly what that means. Structure, variants, responsive behaviour, accessibility requirements. All of it.</p>
+
+                <blockquote>
+                    <p>That shared language isn't just efficient. It's cultural. Teams that have it ship faster, with higher quality, with fewer of the misunderstandings that erode trust between disciplines over time.</p>
+                </blockquote>
+
+                <p>Without it, you get the characteristic friction of cross-functional product work: the design that was obvious in Figma and ambiguous in implementation. The component that "worked" in one context and broke in another. The pattern that was never agreed on, so it was never applied consistently.</p>
+
+                <h2>The two failure modes</h2>
+
+                <p>Design systems fail in two opposite ways.</p>
+
+                <p>The first is the over-engineered system. Exhaustive, technically sophisticated, and practically unusable. It requires so much expertise to contribute to that most of the team doesn't bother. It exists as a monument to design rigour, untouched by the actual work.</p>
+
+                <p>The second is the under-specified system. A component library with no documentation, no rationale, no governance. Instantly usable. Immediately degrading. Every designer who touches it leaves it slightly more inconsistent than they found it, because there's nothing to tell them what good looks like.</p>
+
+                <p>The system that works sits deliberately between these. Principled enough to hold coherence. Flexible enough to grow. Documented enough that a new contributor can understand not just what exists, but why, and therefore what a good addition looks like.</p>
+
+                <h2>A practice, not a deliverable</h2>
+
+                <p>Design systems aren't deliverables. A deliverable has an end state. A design system is an ongoing commitment to maintaining shared decisions at scale.</p>
+
+                <p>This is a philosophical shift as much as a practical one. The system will never be finished. There will always be decisions to revisit, patterns to extend, new contexts to account for. Building for evolution rather than completion changes how you approach the whole thing.</p>
+
+                <p>Naming is a good test for whether a team understands this. A team with a coherent naming convention, for components, tokens, variants, has done the real work of agreeing on how they think, not just what they make. Naming is power. The system that can be talked about clearly is the system that can be maintained. The one that exists only in files, without shared language around it, is already becoming noise.</p>
+
+            </article>
+
+            <div class="note-page-footer">
+                <a href="note-when-to-stop.html" class="note-nav-link">
+                    <span class="note-nav-label">← Previous</span>
+                    <span class="note-nav-title">On Knowing When to Stop Designing</span>
+                </a>
+                <a href="notes.html" class="note-nav-link note-nav-link--next">
+                    <span class="note-nav-label">All Notes →</span>
+                    <span class="note-nav-title">Back to Notes</span>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <svg class="footer-logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                        <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                        <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                        <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                    </svg>
+                    <p class="footer-tagline">Crafting digital experiences that make a difference.</p>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Navigation</h4>
+                        <ul>
+                            <li><a href="index.html#work">Work</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="notes.html">Notes</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Connect</h4>
+                        <ul>
+                            <li><a href="https://dribbble.com/Ndekei" target="_blank">Dribbble</a></li>
+                            <li><a href="https://medium.com/@victorndekei" target="_blank">Medium</a></li>
+                            <li><a href="https://linkedin.com/in/victorndekei" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/victorndekei" target="_blank">Twitter / X</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Get in Touch</h4>
+                        <ul>
+                            <li><a href="https://cal.com/victorndekei/15min" target="_blank">Book a Call</a></li>
+                            <li><a href="mailto:hello@victorndekei.com">Email Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 Victor Ndekei. All rights reserved.</p>
+                <p class="footer-credit">Designed & crafted with ♥</p>
+            </div>
+        </div>
+        <div class="footer-giant-text" aria-hidden="true"><span>VICTOR NDEKEI</span></div>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>
