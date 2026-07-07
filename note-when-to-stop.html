@@ -7,8 +7,28 @@
     <meta name="description" content="Perfectionism and craft aren't the same thing. One is about control, the other is about respect for the work.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        body {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        [data-theme="light"] body {
+            background-image: radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px);
+        }
+        .note-page-title {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-style: italic;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+        }
+        .note-article h2 {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+    </style>
 </head>
 <body>
     <div class="cursor-glow" id="cursorGlow"></div>
@@ -27,6 +47,8 @@
             <ul class="nav-links">
                 <li><a href="index.html#work" class="nav-link">Work</a></li>
                 <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#life" class="nav-link">Life</a></li>
+                <li><a href="drone.html" class="nav-link">Aerials</a></li>
             </ul>
             <div class="nav-actions">
                 <a href="notes.html" class="nav-link nav-link--secondary nav-link--active">Notes</a>
@@ -49,6 +71,8 @@
         <ul class="mobile-menu-links">
             <li><a href="index.html#work" class="mobile-link">Work</a></li>
             <li><a href="index.html#about" class="mobile-link">About</a></li>
+            <li><a href="index.html#life" class="mobile-link">Life</a></li>
+            <li><a href="drone.html" class="mobile-link">Aerials</a></li>
             <li><a href="notes.html" class="mobile-link">Notes</a></li>
         </ul>
         <div class="mobile-actions">
@@ -118,17 +142,6 @@
 
             </article>
 
-            <div class="note-page-footer">
-                <a href="note-trust-finance.html" class="note-nav-link">
-                    <span class="note-nav-label">← Previous</span>
-                    <span class="note-nav-title">Designing for Trust in Financial Products</span>
-                </a>
-                <a href="note-design-systems.html" class="note-nav-link note-nav-link--next">
-                    <span class="note-nav-label">Next →</span>
-                    <span class="note-nav-title">Why Design Systems Are Not Style Guides</span>
-                </a>
-            </div>
-
         </div>
     </main>
 
@@ -180,5 +193,6 @@
     </footer>
 
     <script src="script.js?v=2"></script>
+    <script src="notes-cursor.js"></script>
 </body>
 </html>

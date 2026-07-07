@@ -7,8 +7,40 @@
     <meta name="description" content="Occasional writing on product design, creative process, and the work of building things that last.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        /* ── FigJam canvas: dotted grid background ── */
+        body {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        [data-theme="light"] body {
+            background-image: radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px);
+        }
+
+        /* ── Instrument Serif for titles ── */
+        .notes-title {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-style: italic;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+        }
+
+        .note-body .note-title {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-weight: 400;
+            font-size: 1.4rem;
+            letter-spacing: -0.01em;
+            line-height: 1.25;
+        }
+
+        /* notes-header border-bottom already acts as the separator — remove the duplicate */
+        .note-item:first-child {
+            border-top: none;
+        }
+    </style>
 </head>
 <body>
     <!-- Cursor Glow -->
@@ -31,6 +63,8 @@
             <ul class="nav-links">
                 <li><a href="index.html#work" class="nav-link">Work</a></li>
                 <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#life" class="nav-link">Life</a></li>
+                <li><a href="drone.html" class="nav-link">Aerials</a></li>
             </ul>
             <div class="nav-actions">
                 <a href="notes.html" class="nav-link nav-link--secondary nav-link--active">Notes</a>
@@ -56,6 +90,8 @@
         <ul class="mobile-menu-links">
             <li><a href="index.html#work" class="mobile-link">Work</a></li>
             <li><a href="index.html#about" class="mobile-link">About</a></li>
+            <li><a href="index.html#life" class="mobile-link">Life</a></li>
+            <li><a href="drone.html" class="mobile-link">Aerials</a></li>
             <li><a href="notes.html" class="mobile-link">Notes</a></li>
         </ul>
         <div class="mobile-actions">
@@ -78,7 +114,7 @@
             <div class="notes-header reveal-up">
                 <span class="section-label">Notes</span>
                 <h1 class="notes-title">Thoughts on design,<br>craft, and building.</h1>
-                <p class="notes-desc">Occasional writing on product design, creative process, and the work of building things that last.</p>
+                <p class="notes-desc">I write everything down. These are the ones worth sharing — unfiltered thoughts on design, craft, and the quiet, unglamorous work of building things that actually matter.</p>
             </div>
 
             <!-- Notes List -->
@@ -209,5 +245,6 @@
     </footer>
 
     <script src="script.js?v=2"></script>
+    <script src="notes-cursor.js"></script>
 </body>
 </html>
