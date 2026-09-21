@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa's Kitchen — Case Study</title>
+    <meta name="description" content="Lisa's Kitchen — building my wife's legacy: a platform to preserve three generations of Kenyan family recipes and hand them down before they're forgotten. A case study by Victor Ndekei.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        /* Specific Case Study Styles - Enhanced Typography & Whitespace */
+        .cs-page {
+            padding-top: var(--space-7xl);
+            padding-bottom: var(--space-5xl);
+        }
+        .cs-hero {
+            padding: var(--space-4xl) 0 var(--space-5xl);
+            text-align: center;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .cs-hero-title {
+            font-family: var(--font-heading);
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            margin-bottom: var(--space-lg);
+            color: var(--color-text-primary);
+        }
+        .cs-hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-secondary);
+            max-width: 820px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        .cs-hero-actions {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            margin-top: var(--space-xl);
+            flex-wrap: wrap;
+        }
+        .cs-hero-image-container {
+            margin-top: var(--space-4xl);
+            width: 100%;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+        }
+        .cs-hero-image-container img {
+            width: 100%;
+            display: block;
+        }
+
+        .cs-section {
+            padding: var(--space-5xl) 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .cs-section:last-child {
+            border-bottom: none;
+        }
+
+        .cs-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: var(--space-4xl);
+        }
+
+        @media (max-width: 768px) {
+            .cs-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-2xl);
+            }
+        }
+
+        .cs-header h3 {
+            font-family: var(--font-heading);
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            position: sticky;
+            top: 120px;
+        }
+
+        .cs-header .cs-header-kicker {
+            display: block;
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: var(--space-sm);
+        }
+
+        .cs-content p {
+            font-size: 1.125rem;
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            margin-bottom: var(--space-lg);
+            font-weight: 300;
+        }
+
+        .cs-content p a {
+             color: var(--color-accent);
+             text-decoration: underline;
+             text-decoration-color: var(--color-accent-subtle);
+             text-underline-offset: 4px;
+             transition: color var(--transition-fast);
+        }
+
+        .cs-content p a:hover {
+            color: var(--color-accent-light);
+            text-decoration-color: var(--color-accent-light);
+        }
+
+        .cs-content h4 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin: var(--space-2xl) 0 var(--space-md);
+            color: var(--color-text-primary);
+        }
+
+        .cs-content ul, .cs-content ol {
+            margin-bottom: var(--space-xl);
+        }
+
+        .cs-content li {
+            font-size: 1.125rem;
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            margin-bottom: var(--space-md);
+            padding-left: 24px;
+            position: relative;
+            font-weight: 300;
+        }
+
+        .cs-content ul li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-size: 0.8em;
+            top: 6px;
+        }
+
+        .cs-content ol {
+            counter-reset: my-counter;
+        }
+
+        .cs-content ol li {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .cs-content ol li::before {
+            counter-increment: my-counter;
+            content: counter(my-counter) ". ";
+            color: var(--color-accent);
+            font-weight: 600;
+            font-family: var(--font-heading);
+            margin-right: 8px;
+        }
+
+        .cs-content strong {
+            color: var(--color-text-primary);
+            font-weight: 500;
+        }
+
+        /* Pull quote for the non-linear, honest asides */
+        .cs-aside {
+            margin: var(--space-2xl) 0;
+            padding: var(--space-xl) var(--space-2xl);
+            border-left: 3px solid var(--color-accent);
+            background: var(--color-bg-card);
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+        }
+        .cs-aside p {
+            margin-bottom: 0;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--color-text-primary);
+            font-weight: 300;
+        }
+
+        .cs-image-full {
+            margin: var(--space-4xl) 0;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+        }
+
+        .cs-image-full img {
+            width: 100%;
+            display: block;
+        }
+
+        .cs-caption {
+            font-size: 0.9rem;
+            color: var(--color-text-tertiary);
+            text-align: center;
+            margin-top: calc(var(--space-4xl) * -1 + var(--space-lg));
+            margin-bottom: var(--space-4xl);
+            font-weight: 300;
+        }
+
+        /* Fact / meta block */
+        .cs-facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-2xl);
+        }
+        .cs-fact {
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border-card);
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+        }
+        .cs-fact-label {
+            font-size: 0.75rem;
+            color: var(--color-text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+        .cs-fact-value {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: var(--color-text-primary);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">
+                <svg class="logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                    <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                    <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                    <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                </svg>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#work" class="nav-link">Work</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#life" class="nav-link">Life</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="notes.html" class="nav-link nav-link--secondary">Notes</a>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary">
+                    <span>Book a Call</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-links">
+            <li><a href="index.html#work" class="mobile-link">Work</a></li>
+            <li><a href="index.html#about" class="mobile-link">About</a></li>
+            <li><a href="index.html#life" class="mobile-link">Life</a></li>
+            <li><a href="notes.html" class="mobile-link">Notes</a></li>
+        </ul>
+        <div class="mobile-actions">
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </div>
+        <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--primary btn--full">
+            <span>Book a Call</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="cs-page">
+        <div class="container">
+            <div class="cs-hero reveal-up">
+                <div class="section-label">Case Study</div>
+                <h1 class="cs-hero-title">Lisa's Kitchen</h1>
+                <p class="cs-hero-subtitle">Lisa's Kitchen is my wife's — her way of saving three generations of Kenyan family recipes and handing them down to our children before they slip away. My job was to build a home worthy of that. This is the honest version of how it happened: personal, non-linear, doubling back, and letting the food decide.</p>
+                <div class="cs-hero-actions">
+                    <a href="https://lisas-kitchen-ke.vercel.app/" target="_blank" class="btn btn--primary">
+                        <span>Visit Live Site</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+                <div class="cs-hero-image-container">
+                    <img src="images/lisa-thumbnail.webp" alt="Lisa's Kitchen landing page — a warm, parchment-toned recipe site with a plate of Coastal Pilau in the hero">
+                </div>
+            </div>
+
+            <!-- Overview -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <span class="cs-header-kicker">01 — Start here</span>
+                        <h3>Overview</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <p>This one was personal in a way the others aren't. Lisa's Kitchen is my wife's legacy — her way of holding onto the food her grandmother cooked, that her mother cooked, that she now cooks, so she can hand it down to our children before it slips away. Recipes like these usually live in one person's hands and leave the room with them. She didn't want that to happen to hers.</p>
+                        <p>So the platform is really a preservation project wearing the clothes of a recipe site: Kenyan home cooking from the coast to the highlands — nyama choma, pilau, soft chapati, mandazi, githeri, sukuma wiki — written plainly, scaled to your table, and built to be cooked from a phone propped on the counter. The test it has to pass is simple and unforgiving: the dish has to turn out the same in your kitchen as it does in hers.</p>
+                        <p>My part was to build the vessel worthy of that — research, design, build and deploy, as the sole architect of the platform. Knowing whose recipes these were raised the stakes on every small decision. And what follows isn't a tidy Discover → Define → Design → Deliver march. It genuinely wasn't. It was closer to cooking a big pot of pilau: you start it, you taste it, you realise the onions aren't dark enough, and you go back.</p>
+
+                        <div class="cs-facts">
+                            <div class="cs-fact">
+                                <div class="cs-fact-label">Role</div>
+                                <div class="cs-fact-value">Lead architect — research, design, build, deploy</div>
+                            </div>
+                            <div class="cs-fact">
+                                <div class="cs-fact-label">Timeline</div>
+                                <div class="cs-fact-value">One-month sprint</div>
+                            </div>
+                            <div class="cs-fact">
+                                <div class="cs-fact-label">Industry</div>
+                                <div class="cs-fact-value">Food &amp; culture</div>
+                            </div>
+                            <div class="cs-fact">
+                                <div class="cs-fact-label">Stack</div>
+                                <div class="cs-fact-value">Figma, front-end build, Vercel</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- It didn't start as a website -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <span class="cs-header-kicker">02 — Before there was a plan</span>
+                        <h3>It didn't start as a website</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <p>It started at our own kitchen table — and in a mess of WhatsApp voice notes. My wife would ask her mum how to make something, and the answer would come back as a two-minute audio clip with not a single quantity in it: <em>a handful of this, cook it until it looks right.</em> The recipe existed, but only inside her mum's hands. That was the exact thing we were trying to catch before it was gone.</p>
+                        <p>So the first thing I built wasn't a homepage — it was a single recipe page. Before I knew what the brand looked like, or what the navigation was, or whether this was even a "website," I wanted to see whether one of her family's recipes could be written down in a way that actually survived contact with a kitchen. The <strong>Coastal Pilau</strong> page came first. The landing page you see now was one of the <em>last</em> things I designed, and I rebuilt it twice.</p>
+                        <div class="cs-aside reveal-up">
+                            <p>The product is the recipe page. The homepage is just the front door. I got that backwards at first — spent a day on a hero before I'd proven a single recipe held up — and had to correct course.</p>
+                        </div>
+                        <p>That reordering set the tone for the month. I stopped treating "research" as a phase with a start and an end. It kept happening the whole way through — mostly in the form of cooking these dishes myself, sending the drafts back to my wife and her mum, discovering that what I'd written didn't work, and going back to fix it.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Getting the Kenyan-ness wrong first -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <span class="cs-header-kicker">03 — A wrong turn worth keeping</span>
+                        <h3>Getting the Kenyan-ness wrong, first</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <p>My first instinct for making it feel Kenyan was, frankly, heavy-handed. Full kanga-cloth backgrounds. Loud pattern behind everything. A flag-adjacent palette. It looked like a tourism poster, not a kitchen. It was trying so hard to say "this is Kenyan" that it stopped feeling like <em>her home</em>, which was the entire point.</p>
+                        <p>I pulled almost all of it out. What survived is a single, restrained band of woven kitenge pattern that sits just under the header — the way a strip of cloth sits on a table, present but not shouting. One quiet texture did more than a whole background ever did. That was the first time the project taught me the lesson it kept teaching: <strong>restraint reads as confidence; decoration reads as insecurity.</strong></p>
+                        <p>The other early wrong turn was the palette. My first pass was a bright, minty green on white — clean, "modern," and completely generic. It looked like every food-delivery startup. The problem wasn't that it was ugly; the problem was that it felt like nowhere.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Colour came from the food -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <span class="cs-header-kicker">04 — Letting the food decide</span>
+                        <h3>Colour came from the food, not a palette tool</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <p>Once I stopped picking colours from a generator and started pulling them off actual plates, the palette wrote itself. Every colour on the site is a food or a kitchen surface:</p>
+                        <ul>
+                            <li><strong>Parchment / warm cream</strong> — the base of everything, taken from ugali and flour and the paper you'd scribble a recipe on. It's the tablecloth the whole site is laid out on.</li>
+                            <li><strong>Deep forest-olive green</strong> — sukuma wiki, kitchen herbs, the rim of the enamel plates the food is served on. It became the primary, used for the logo, the buttons, and the numbered cooking steps.</li>
+                            <li><strong>Terracotta / spice amber</strong> — pilau masala, the crust on a mandazi, the "KARIBU" welcome kicker. It's the accent that carries all the little cultural cues.</li>
+                            <li><strong>Brick red</strong> — used almost nowhere except the one action that matters most on the page, the newsletter <strong>Sign up</strong>. Scarcity is what makes it work.</li>
+                        </ul>
+                        <p>Grounding the palette in the food did something I didn't fully expect: it made the photography and the interface feel like one dish instead of a UI wrapped around some pictures. The green plate rim in the hero and the green step-numbers on the recipe page are, quietly, the same green.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Two typefaces, one argument -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <span class="cs-header-kicker">05 — The type took a few tries</span>
+                        <h3>Two typefaces having the project's argument</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <p>The headline face went through several candidates before it settled. I wanted the warmth of an old recipe book — a high-contrast serif with real personality, the kind that can set the word <em>home</em> in italic and make it feel like it means it. But early on I over-indexed on character and picked something so expressive it was genuinely hard to read at a glance, which is a problem when someone's reading it mid-stir with steam in their face.</p>
+                        <p>So the type became a deliberate pairing, and honestly it's the argument the whole product is having, in two fonts:</p>
+                        <ul>
+                            <li>An <strong>expressive serif</strong> for headings and recipe titles — heritage, warmth, the feeling that these dishes come from somewhere.</li>
+                            <li>A <strong>clean, sturdy sans</strong> for ingredients, steps and measurements — utilitarian, legible at arm's length, no romance where you need a number.</li>
+                        </ul>
+                        <p>Heritage in the headline, precision in the instructions. That tension — recipes cooked by feel, written down with rigour — is the product in one line, and the typography carries it without anyone needing it explained.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Designing for greasy hands -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <span class="cs-header-kicker">06 — Where the real research was</span>
+                        <h3>Designing for greasy hands and a propped-up phone</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <p>The most useful research wasn't a survey. It was handing my phone to my wife and her mum mid-cook and watching what went wrong. That's where nearly every "nitty" decision on the recipe page came from.</p>
+                        <p>People don't <em>read</em> a recipe while cooking — they glance at it, look away for two minutes, and come back having lost their place. Their hands are wet or oily, so they don't want to scroll precisely. There's a hot sufuria between them and the screen. Once I'd watched that a few times, the recipe page more or less designed itself:</p>
+                        <ul>
+                            <li><strong>Tick-off ingredients.</strong> Every ingredient is a checkbox, so you can mark what's already in the pot and not re-read the whole list. This came directly from watching someone add the onions twice.</li>
+                            <li><strong>Big, numbered, one-action steps.</strong> Each step is a bold action title — "Brown the meat," "Caramelise the onions" — with the detail underneath. You can find your place from across the counter.</li>
+                            <li><strong>A "serves" stepper that does the maths.</strong> Set how many you're feeding and the quantities rescale. Nobody should be doing fractions over a hot pan.</li>
+                            <li><strong>Ad-free, on purpose.</strong> The one rule that never moved: nothing gets between the person and the food. No pop-ups, no auto-playing anything, no "jump to recipe."</li>
+                            <li><strong>The stat cards up top</strong> — total time, hands-on time, serves, difficulty — because the real first question is always "do I have time for this right now?"</li>
+                        </ul>
+
+                        <div class="cs-image-full reveal-up">
+                            <img src="images/lisa-recipe-detail.webp" alt="Lisa's Kitchen recipe detail page for Coastal Pilau — tick-off ingredients with a serves stepper on the left, numbered method steps on the right, and a Cook's Notes callout" loading="lazy">
+                        </div>
+                        <p class="cs-caption">The Coastal Pilau page — the first screen I designed and the last one I stopped fussing over.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The maths problem -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <span class="cs-header-kicker">07 — The bit nobody warns you about</span>
+                        <h3>The scaling maths quietly broke everything</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <p>The serves stepper sounds trivial. It was the single messiest thing in the build. "Scale a recipe" is easy until you meet real ingredients: you can double 500&nbsp;g of beef, but you can't meaningfully double <em>"salt, to taste,"</em> and doubling <em>"2 potatoes, optional"</em> to four when the person didn't want potatoes in the first place is just noise.</p>
+                        <p>I went back and forth on this more than anything else. Scale everything and the recipe fills with ugly fractions and nonsense precision. Scale nothing and the feature is a lie. The answer I landed on was to decide, per ingredient, what's actually a <em>ratio</em> and what's a <em>judgement call</em> — the measurable things scale; the to-taste and the optional things hold steady and stay human. It's a small thing on screen and it took a disproportionate share of the month.</p>
+                        <div class="cs-aside reveal-up">
+                            <p>Half of designing this was deciding what <em>not</em> to automate. A recipe isn't a spreadsheet, and the moments where you trust the cook are the moments that make it feel like home cooking instead of a machine.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Writing down what's usually left unsaid -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <span class="cs-header-kicker">08 — The soul of it</span>
+                        <h3>Writing down what's usually left unsaid</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <p>The thing that makes a home recipe work is never in the ingredient list. It's the tacit knowledge — <em>don't rush the onions, the colour is the whole dish</em> — that a bare recipe throws away. If the platform only captured quantities, it would technically preserve the recipe and completely lose the cooking.</p>
+                        <p>So two things became load-bearing:</p>
+                        <ul>
+                            <li><strong>Cook's Notes.</strong> A warm callout at the bottom of every recipe — "Little things that matter." Substitutions (no pilau masala? here's what to toast and grind), the trick that keeps the rice grains separate, why you serve it with kachumbari and lime. This is where her grandmother's and mother's voices actually live — the corrections they'd give you if they were standing at the stove beside you.</li>
+                            <li><strong>The copy voice.</strong> The words code-switch the way Kenyans genuinely talk. <em>Karibu. Chakula. Sufuria. Pull up a chair.</em> The Sunday newsletter is framed as "the way your mother would send you off with something to cook," and the fine print reads "Free. No spam — just chakula." None of that is decoration; it's the difference between a database of recipes and a kitchen you're welcome in.</li>
+                        </ul>
+                        <p>The regional framing does the same job structurally. Recipes are organised by region as well as by course — <em>Coast / Swahili, Central highlands, Nyama &amp; grills</em> — so "8 regions of Kenya" isn't a marketing stat, it's the actual map of where this food comes from. A breadcrumb reading <strong>MAINS · COAST · SWAHILI</strong> tells you the lineage of the dish before you've read a word of it.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What got cut -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <span class="cs-header-kicker">09 — When the clock won</span>
+                        <h3>What got cut when the month ran out</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <p>A one-month sprint that covers research, design, build <em>and</em> deployment means the scope has to lose an argument with the calendar, repeatedly. Some of my favourite ideas didn't make it, and that was the right call.</p>
+                        <ul>
+                            <li><strong>Cut:</strong> a full meal-planner and an auto-generated grocery list across recipes. Lovely, and a completely different, bigger product. It would have eaten the whole month and shipped nothing.</li>
+                            <li><strong>Nearly cut, kept:</strong> the regional taxonomy. It was more work than a flat list, but it's so central to what the food <em>is</em> that dropping it would have hollowed the project out.</li>
+                            <li><strong>Survived the cut:</strong> the serves stepper. Every time I looked at trimming it, I remembered it solved a real, felt pain, so it stayed even though it was the most expensive small feature in the build.</li>
+                            <li><strong>Shipped "just enough":</strong> search and the category filters are deliberately simple. Good enough to find a dish in twelve, honest about not being more than that yet.</li>
+                        </ul>
+                        <p>Cutting the planner freed up the time that made the recipe page actually good. That trade — fewer features, cooked properly — is the same philosophy as the recipes themselves: <em>cooked, then measured.</em> Nothing goes up until it's been made by hand and the amounts are pinned down.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Where it landed -->
+            <section class="cs-section">
+                <div class="cs-grid">
+                    <div class="cs-header reveal-up">
+                        <span class="cs-header-kicker">10 — Looking back</span>
+                        <h3>Where it landed</h3>
+                    </div>
+                    <div class="cs-content reveal-up">
+                        <p>What shipped is a warm, unhurried, phone-first place to cook Kenyan food: 40+ tested recipes across eight regions, a homepage that lets you filter by what you're actually cooking today, a Sunday recipe drop, and a recipe page built for wet hands and a propped-up phone. Deployed and live.</p>
+                        <p>Owning the whole stack — research through deployment — meant no decision got lost in a handoff. When I learned something at the stove — or when my wife or her mum did — I could change the design and ship the fix the same day. The cost was that I had to be honest with myself about what was working, because there was nobody else to catch it.</p>
+                        <p>The biggest thing I'd carry into the next project: the messy, doubling-back version <em>was</em> the process, not a failure of it. The strongest decisions here — one strip of cloth instead of a background, colours pulled off plates, deciding what not to automate, building the recipe before the homepage — all came from going the wrong way first and being willing to walk back. Like the pilau, you don't get the colour by rushing it.</p>
+                        <p>But the real measure of this one was never going to be traffic or time-on-page. It's that years from now our children can open Lisa's Kitchen and cook their great-grandmother's pilau exactly the way she made it — that the <em>handful of this, pinch of that</em> finally has somewhere safe to live. That's the legacy my wife set out to protect. My part was making sure the thing that holds it is built with as much care as the recipes deserve.</p>
+                        <div class="cs-hero-actions" style="justify-content: flex-start; margin-top: var(--space-2xl);">
+                            <a href="https://lisas-kitchen-ke.vercel.app/" target="_blank" class="btn btn--primary">
+                                <span>Visit Live Site</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                            <a href="index.html#work" class="btn btn--outline">
+                                <span>Back to Work</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <svg class="footer-logo-svg" width="46" height="37" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.54237 36.4608H0L12.4843 0.263672L16.7691 10.2543L7.54237 36.4608Z" fill="currentColor"/>
+                        <path d="M22.8048 36.4611L30.3192 36.3744L18.2683 12.6836L15.2422 20.839L22.8048 36.4611Z" fill="currentColor"/>
+                        <path d="M37.9337 0H45.4761L32.9918 36.1972L28.707 26.2066L37.9337 0Z" fill="currentColor"/>
+                        <path d="M22.6746 0L15.1602 0.0867124L27.211 23.7775L30.2372 15.6221L22.6746 0Z" fill="currentColor"/>
+                    </svg>
+                    <p class="footer-tagline">Crafting digital experiences that make a difference.</p>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Navigation</h4>
+                        <ul>
+                            <li><a href="index.html#work">Work</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#faq">FAQ</a></li>
+                            <li><a href="index.html#life">Life</a></li>
+                            <li><a href="notes.html">Notes</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Connect</h4>
+                        <ul>
+                            <li><a href="https://dribbble.com/Ndekei" target="_blank">Dribbble</a></li>
+                            <li><a href="https://medium.com/@victorndekei" target="_blank">Medium</a></li>
+                            <li><a href="https://linkedin.com/in/victorndekei" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/victorndekei" target="_blank">Twitter / X</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Get in Touch</h4>
+                        <ul>
+                            <li><a href="https://cal.com/victorndekei/15min" target="_blank">Book a Call</a></li>
+                            <li><a href="mailto:hello@victorndekei.com">Email Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 Victor Ndekei. All rights reserved.</p>
+                <p class="footer-credit">Designed & crafted with ♥</p>
+            </div>
+        </div>
+        <div class="footer-giant-text" aria-hidden="true">
+            <span>VICTOR NDEKEI</span>
+        </div>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>
