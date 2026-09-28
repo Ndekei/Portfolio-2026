@@ -1369,7 +1369,7 @@ body:hover .cursor-glow {
     right: 12px;
     bottom: 10px;
     text-align: center;
-    font-family: var(--font-display);
+    font-family: 'Caveat', cursive;
     font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.05;
