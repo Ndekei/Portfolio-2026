@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
     <!-- Cursor Glow -->
@@ -74,106 +74,43 @@
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="hero-container">
-            <div class="hero-badge reveal-up">
-                <span class="badge-dot"></span>
-                <span>Available for new projects</span>
+        <div class="container">
+            <div class="hero-id reveal-up">
+                <img src="images/personal/portrait-victor.jpg" alt="Victor Ndekei" class="hero-avatar">
+                <div class="hero-id-text">
+                    <span class="hero-name">Victor Ndekei</span>
+                    <span class="hero-role">Design Lead at Roamtech</span>
+                </div>
+                <span class="hero-status"><span class="badge-dot"></span>Available for new projects</span>
             </div>
             <h1 class="hero-title reveal-up">
-                <span class="hero-line">I craft cutting-edge</span>
-                <span class="hero-line">digital product</span>
-                <span class="hero-line hero-line--accent">experiences<span class="hero-dot">.</span></span>
+                I design digital products people rely on every day.
+                <span class="hero-title-muted">Banking for 9.5 million customers, a content platform scaled past 1 million users, and tools I build and ship myself.</span>
             </h1>
-            <p class="hero-subtitle reveal-up">
-                Design Lead at Roamtech, merging deep user empathy with the sharp business acumen I'm honing in my MBA program at the University of Salford.
-            </p>
-            <div class="hero-ctas reveal-up">
-                <a href="#work" class="btn btn--large btn--primary">
-                    <span>View My Work</span>
-                    <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
-                <a href="https://cal.com/victorndekei/15min" target="_blank" class="btn btn--large btn--outline">
-                    <span>Let's Talk</span>
-                </a>
+            <div class="hero-links reveal-up">
+                <a href="#work" class="hero-link hero-link--primary">See selected work <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <a href="https://cal.com/victorndekei/15min" target="_blank" class="hero-link">Book a call</a>
+                <a href="https://linkedin.com/in/victorndekei" target="_blank" class="hero-link">LinkedIn</a>
+                <a href="mailto:hello@victorndekei.com" class="hero-link">Email</a>
             </div>
-            <div class="hero-stats reveal-up">
-                <div class="stat">
-                    <div class="stat-value">
-                        <span class="stat-number" data-target="6">0</span><span class="stat-suffix">+</span>
-                    </div>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <div class="stat-value">
-                        <span class="stat-number" data-target="1">0</span><span class="stat-suffix">M+</span>
-                    </div>
-                    <span class="stat-label">Users Impacted</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <div class="stat-value">
-                        <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
-                    </div>
-                    <span class="stat-label">Projects Delivered</span>
-                </div>
-            </div>
-        </div>
-        <div class="hero-scroll-indicator">
-            <div class="scroll-line"></div>
-            <span>Scroll to explore</span>
         </div>
     </section>
-
-    <!-- Marquee -->
-    <div class="marquee-section">
-        <div class="marquee">
-            <div class="marquee-track">
-                <span class="marquee-item">Product Design</span>
-                <span class="marquee-sep">✦</span>
-                <span class="marquee-item">UX Strategy</span>
-                <span class="marquee-sep">✦</span>
-                <span class="marquee-item">Mobile Apps</span>
-                <span class="marquee-sep">✦</span>
-                <span class="marquee-item">Web Experiences</span>
-                <span class="marquee-sep">✦</span>
-                <span class="marquee-item">Design Systems</span>
-                <span class="marquee-sep">✦</span>
-                <span class="marquee-item">User Research</span>
-                <span class="marquee-sep">✦</span>
-                <span class="marquee-item">Prototyping</span>
-                <span class="marquee-sep">✦</span>
-                <span class="marquee-item">Product Design</span>
-                <span class="marquee-sep">✦</span>
-                <span class="marquee-item">UX Strategy</span>
-                <span class="marquee-sep">✦</span>
-                <span class="marquee-item">Mobile Apps</span>
-                <span class="marquee-sep">✦</span>
-                <span class="marquee-item">Web Experiences</span>
-                <span class="marquee-sep">✦</span>
-                <span class="marquee-item">Design Systems</span>
-                <span class="marquee-sep">✦</span>
-                <span class="marquee-item">User Research</span>
-                <span class="marquee-sep">✦</span>
-                <span class="marquee-item">Prototyping</span>
-                <span class="marquee-sep">✦</span>
-            </div>
-        </div>
-    </div>
 
     <!-- Featured Work -->
     <section class="work-section" id="work">
         <div class="container">
-            <div class="section-header reveal-up">
-                <span class="section-label">Featured Work</span>
-                <h2 class="section-title">Selected <br>case studies</h2>
-                <div class="projects-grid">
+            <div class="work-header">
+                <h2 class="work-heading">Selected work</h2>
+                <span class="work-count">08 projects</span>
+            </div>
+            <div class="projects-grid">
                 <!-- Fonte Générer -->
                 <article class="project-card reveal-up" id="project-fontgen">
                     <div class="project-card-image">
                         <img src="images/project-fontgen.jpg" alt="Fonte Générer — Handwriting to Font Generator" loading="lazy">
                     </div>
                     <div class="project-card-content">
+                        <span class="project-tag">Side project · Web app</span>
                         <h3 class="project-title">Custom Font Generator Tool - Built by Me</h3>
                         <p class="project-desc">My passion project: turn your handwriting into a real, installable font, entirely in the browser. Print a template or draw on screen, snap a photo, and download TTF, OTF or WOFF files. No account, no upload, no paywall. Designed and built solo, from scan detection to a hand-written TrueType encoder.</p>
                         <div class="project-links">
@@ -189,6 +126,7 @@
                         <img src="images/Fedha-Mac.png" alt="Fedha App - Budgeting Tool" loading="lazy">
                     </div>
                     <div class="project-card-content">
+                        <span class="project-tag">Fintech · Web app</span>
                         <h3 class="project-title">Fedha App - Budgeting Tool</h3>
                         <p class="project-desc">Take control of your finances with an AI-driven budgeting tool. Track spending, visualize cash flow through intuitive charts, and unlock smart insights to optimize your investments and accelerate savings.</p>
                         <div class="project-links">
@@ -203,6 +141,7 @@
                         <img src="images/project-coop-login.jpg" alt="Co-op Bank Login Redesign" loading="lazy">
                     </div>
                     <div class="project-card-content">
+                        <span class="project-tag">Banking · Mobile app</span>
                         <h3 class="project-title">Redesigning the Co-op Bank Login Page</h3>
                         <p class="project-desc">Transforming the highest traffic screen into a powerful conversion engine and self-service hub for 9.5 million customers.</p>
                         <div class="project-links">
@@ -218,6 +157,7 @@
                         <img src="images/project-coop-web.jpg" alt="Co-op Bank Web Experience" loading="lazy">
                     </div>
                     <div class="project-card-content">
+                        <span class="project-tag">Banking · Web platform</span>
                         <h3 class="project-title">Transforming Internet Banking</h3>
                         <p class="project-desc">I designed a next-gen internet banking platform that simplifies complex banking into a clean, intuitive and responsive interface. Manage cards, pay beneficiaries, view detailed statements and track your spending with unparalleled ease.</p>
                         <div class="project-links">
@@ -232,6 +172,7 @@
                         <img src="images/project-k24.jpg" alt="K24 Plus Mobile App" loading="lazy">
                     </div>
                     <div class="project-card-content">
+                        <span class="project-tag">Media · Mobile app</span>
                         <h3 class="project-title">K24 Plus Mobile App</h3>
                         <p class="project-desc">Led the end-to-end Research and Design for K24 Plus, a content aggregation platform that scaled to over 1 million users.</p>
                         <div class="project-links">
@@ -246,6 +187,7 @@
                         <img src="images/Vita-cover.png" alt="Global Insurance Website - Vita Virtues" loading="lazy">
                     </div>
                     <div class="project-card-content">
+                        <span class="project-tag">Insurance · Website</span>
                         <h3 class="project-title">Global Insurance Website</h3>
                         <p class="project-desc">I designed a next-gen internet banking platform that simplifies complex banking into a clean, intuitive and responsive interface. Manage cards, pay beneficiaries, view detailed statements and track your spending with unparalleled ease.</p>
                         <div class="project-links">
@@ -260,6 +202,7 @@
                         <img src="images/project-airone.jpg" alt="AirOne Flight Booking" loading="lazy">
                     </div>
                     <div class="project-card-content">
+                        <span class="project-tag">Travel · Capstone</span>
                         <h3 class="project-title">AirOne — Flight Booking Flow</h3>
                         <p class="project-desc">Capstone project executing a complete product design cycle for an intuitive flight booking experience.</p>
                         <div class="project-links">
@@ -274,6 +217,7 @@
                         <img src="images/lisa-thumbnail.webp" alt="Lisa's Kitchen — Kenyan Home Cooking Platform" loading="lazy">
                     </div>
                     <div class="project-card-content">
+                        <span class="project-tag">Food · Web app</span>
                         <h3 class="project-title">Lisa's Kitchen — Kenyan Home Cooking</h3>
                         <p class="project-desc">My wife's legacy — a platform preserving three generations of Kenyan family recipes so they can be handed down before they're forgotten. Designed, researched, built and shipped solo in a one-month sprint; written plainly, scaled to your table, and cooked from a phone on the counter.</p>
                         <div class="project-links">
@@ -282,7 +226,6 @@
                         </div>
                     </div>
                 </article>
-            </div>   </article>
             </div>
         </div>
     </section>
