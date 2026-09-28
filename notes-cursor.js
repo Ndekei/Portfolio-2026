@@ -33,7 +33,7 @@
       white-space: nowrap;
       box-shadow: 0 1px 3px rgba(0,0,0,0.3);
       user-select: none;
-      font-family: Inter, -apple-system, sans-serif;
+      font-family: 'Inter Display', -apple-system, sans-serif;
     }
   `;
   document.head.appendChild(style);

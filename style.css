@@ -3,7 +3,150 @@
    Inspired by TitanGate Equity's premium aesthetic
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Inter Display, self-hosted (extracted from Inter.ttc, Latin subset) */
+@font-face {
+    font-family: 'Inter Display';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('fonts/InterDisplay-Thin.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    font-style: italic;
+    font-weight: 100;
+    font-display: swap;
+    src: url('fonts/InterDisplay-ThinItalic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url('fonts/InterDisplay-ExtraLight.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    font-style: italic;
+    font-weight: 200;
+    font-display: swap;
+    src: url('fonts/InterDisplay-ExtraLightItalic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('fonts/InterDisplay-Light.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url('fonts/InterDisplay-LightItalic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/InterDisplay-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/InterDisplay-RegularItalic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('fonts/InterDisplay-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url('fonts/InterDisplay-MediumItalic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('fonts/InterDisplay-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url('fonts/InterDisplay-SemiBoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('fonts/InterDisplay-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('fonts/InterDisplay-BoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('fonts/InterDisplay-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    font-style: italic;
+    font-weight: 800;
+    font-display: swap;
+    src: url('fonts/InterDisplay-ExtraBoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('fonts/InterDisplay-Black.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: url('fonts/InterDisplay-BlackItalic.woff2') format('woff2');
+}
 
 :root {
     /* Core Palette — Deep black with electric blue */
@@ -33,8 +176,7 @@
     --gradient-glow: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 76, 255, 0.04), transparent 40%);
 
     /* Typography */
-    /* Inter Display everywhere: Inter's optical-size axis pinned to its display cut (opsz 32) */
-    --font-display: 'Inter', -apple-system, sans-serif;
+    --font-display: 'Inter Display', -apple-system, sans-serif;
     --font-heading: var(--font-display);
     --font-body: var(--font-display);
 
@@ -114,8 +256,6 @@
 }
 
 html {
-    font-optical-sizing: none;
-    font-variation-settings: 'opsz' 32;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -154,7 +294,6 @@ button {
     background: none;
     cursor: pointer;
     font-family: inherit;
-    font-variation-settings: inherit;
     color: inherit;
 }
 
