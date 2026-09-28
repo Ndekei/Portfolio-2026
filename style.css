@@ -779,7 +779,7 @@ body:hover .cursor-glow {
    PROJECTS / WORK
    ============================================ */
 .work-section {
-    padding: clamp(4rem, 7vw, 6rem) 0;
+    padding: clamp(5.5rem, 9vw, 8.5rem) 0;
     background-color: var(--color-bg-elevated);
 }
 
@@ -915,7 +915,7 @@ body:hover .cursor-glow {
    ABOUT
    ============================================ */
 .about-section {
-    padding: clamp(4rem, 7vw, 6rem) 0;
+    padding: clamp(5.5rem, 9vw, 8.5rem) 0;
     position: relative;
 }
 
@@ -1015,7 +1015,7 @@ body:hover .cursor-glow {
    PROCESS
    ============================================ */
 .process-section {
-    padding: clamp(4rem, 7vw, 6rem) 0;
+    padding: clamp(5.5rem, 9vw, 8.5rem) 0;
     position: relative;
 }
 
@@ -1097,7 +1097,7 @@ body:hover .cursor-glow {
    EXPLORATIONS
    ============================================ */
 .explorations-section {
-    padding: clamp(4rem, 7vw, 6rem) 0;
+    padding: clamp(5.5rem, 9vw, 8.5rem) 0;
     position: relative;
 }
 
@@ -1172,7 +1172,7 @@ body:hover .cursor-glow {
    LIFE / THE PILE — scattered candid photos
    ============================================ */
 .life-section {
-    padding: clamp(4rem, 7vw, 6rem) 0 clamp(3.5rem, 5vw, 5rem);
+    padding: clamp(5.5rem, 9vw, 8.5rem) 0 clamp(4.5rem, 7vw, 7rem);
     position: relative;
     overflow: hidden;
 }
@@ -1398,7 +1398,7 @@ body:hover .cursor-glow {
 }
 
 @media (max-width: 560px) {
-    .life-section { padding: var(--space-4xl) 0 var(--space-3xl); }
+    .life-section { padding: var(--space-5xl) 0 var(--space-4xl); }
     .section-header--center { margin-bottom: var(--space-3xl); }
     .pile {
         gap: var(--space-sm);
@@ -1416,7 +1416,7 @@ body:hover .cursor-glow {
    FAQ
    ============================================ */
 .faq-section {
-    padding: clamp(4rem, 7vw, 6rem) 0;
+    padding: clamp(5.5rem, 9vw, 8.5rem) 0;
     position: relative;
 }
 
@@ -1511,7 +1511,7 @@ body:hover .cursor-glow {
    CTA SECTION
    ============================================ */
 .cta-section {
-    padding: clamp(4rem, 7vw, 6rem) 0;
+    padding: clamp(5.5rem, 9vw, 8.5rem) 0;
 }
 
 .cta-card {
