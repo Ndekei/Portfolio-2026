@@ -551,11 +551,6 @@ body:hover .cursor-glow {
     color: var(--color-text-primary);
 }
 
-.hero-role {
-    font-size: 0.875rem;
-    color: var(--color-text-secondary);
-}
-
 .hero-status {
     display: inline-flex;
     align-items: center;
