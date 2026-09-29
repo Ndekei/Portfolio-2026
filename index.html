@@ -143,7 +143,8 @@
                 <!-- Fedha App -->
                 <article class="project-card reveal-up" id="project-fedha">
                     <div class="project-card-image">
-                        <img src="images/Fedha-Mac.png" alt="Fedha App - Budgeting Tool" loading="lazy">
+                        <!-- Animated WebP walkthrough; falls back to the static cover if it can't load or the browser can't decode it -->
+                        <img src="images/fedha-cover.webp" alt="Fedha App - Budgeting Tool" loading="lazy" onerror="this.onerror=null; this.src='images/Fedha-Mac.png';">
                     </div>
                     <div class="project-card-content">
                         <span class="project-tag">Fintech · Web app</span>
@@ -209,7 +210,7 @@
                     <div class="project-card-content">
                         <span class="project-tag">Insurance · Website</span>
                         <h3 class="project-title">Global Insurance Website</h3>
-                        <p class="project-desc">I designed a next-gen internet banking platform that simplifies complex banking into a clean, intuitive and responsive interface. Manage cards, pay beneficiaries, view detailed statements and track your spending with unparalleled ease.</p>
+                        <p class="project-desc">Website for Vita Virtues, an insurtech platform that lets brokers quote any product, from any insurer, in under 15 seconds. I designed it to make two technical products, SalesLabb for quoting and VVIPortal for policy management, feel simple, with every section leading to a demo request.</p>
                         <div class="project-links">
                             <a href="https://vita-virtues.vercel.app/#" target="_blank" class="project-link project-link--external">View Live Site <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                         </div>
