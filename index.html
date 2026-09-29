@@ -126,7 +126,8 @@
                 <!-- Fonte Générer -->
                 <article class="project-card reveal-up" id="project-fontgen">
                     <div class="project-card-image">
-                        <img src="images/project-fontgen.jpg" alt="Fonte Générer — Handwriting to Font Generator" loading="lazy">
+                        <!-- Animated WebP walkthrough; falls back to the static cover if it can't load or the browser can't decode it -->
+                        <img src="images/project-fontgen.webp" alt="Fonte Générer — Handwriting to Font Generator" loading="lazy" onerror="this.onerror=null; this.src='images/project-fontgen.jpg';">
                     </div>
                     <div class="project-card-content">
                         <span class="project-tag">Side project · Web app</span>
