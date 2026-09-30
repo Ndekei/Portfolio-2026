@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
     <!-- Cursor Glow -->
@@ -31,6 +31,7 @@
             <ul class="nav-links">
                 <li><a href="#work" class="nav-link">Work</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#giving-back" class="nav-link">Giving Back</a></li>
                 <li><a href="#life" class="nav-link">Life</a></li>
             </ul>
             <div class="nav-actions">
@@ -57,6 +58,7 @@
         <ul class="mobile-menu-links">
             <li><a href="#work" class="mobile-link">Work</a></li>
             <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#giving-back" class="mobile-link">Giving Back</a></li>
             <li><a href="#life" class="mobile-link">Life</a></li>
             <li><a href="notes.html" class="mobile-link">Notes</a></li>
         </ul>
@@ -350,6 +352,71 @@
         </div>
     </section>
 
+    <!-- Giving Back — Interface Playbook -->
+    <section class="giving-section" id="giving-back">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-label">Giving Back</span>
+                <h2 class="section-title">Paying it <br><span class="text-gradient">forward.</span></h2>
+                <p class="section-desc giving-desc">The details that separate a good interface from a finished one are rarely written down. Most designers pick them up slowly, from a senior who takes the time to point them out. I'm writing them down, so the designers coming up after me don't have to wait for that person.</p>
+            </div>
+
+            <article class="playbook-feature reveal-up">
+                <a href="https://interfaceplaybook.vercel.app/" target="_blank" rel="noopener" class="playbook-shot" aria-label="Open the Interface Playbook in a new tab">
+                    <span class="playbook-shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>interfaceplaybook.vercel.app</span></span>
+                    <img src="images/interface-playbook-dark.jpg" alt="The Interface Playbook home page: a field guide to the small details that make interfaces feel finished" class="playbook-shot-img playbook-shot-img--dark" loading="lazy">
+                    <img src="images/interface-playbook-light.jpg" alt="" class="playbook-shot-img playbook-shot-img--light" loading="lazy">
+                </a>
+
+                <div class="playbook-body">
+                    <span class="playbook-eyebrow"><span class="badge-dot"></span>Open resource · Free to use</span>
+                    <h3 class="playbook-title">Interface Playbook</h3>
+                    <p class="playbook-lead">A field guide and starter pack for the small details that make an interface feel finished.</p>
+                    <p class="playbook-text">I built it on purpose, for the junior designers and career-switchers I want to see grow. Every detail comes with a rule you can apply today, a short reason why it matters, and a live demo to play with, because craft is learned by seeing it, not by being told it exists. It's free and open to anyone, with no sign-up.</p>
+
+                    <dl class="playbook-stats">
+                        <div class="playbook-stat"><dt>Details</dt><dd>43</dd></div>
+                        <div class="playbook-stat"><dt>Chapters</dt><dd>7</dd></div>
+                        <div class="playbook-stat"><dt>Pre-ship checks</dt><dd>49</dd></div>
+                    </dl>
+
+                    <div class="playbook-ctas">
+                        <a href="https://interfaceplaybook.vercel.app/" target="_blank" rel="noopener" class="btn btn--large btn--primary">
+                            <span>Open the Playbook</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <span class="playbook-note">the guide I wish I'd been handed</span>
+                    </div>
+                </div>
+            </article>
+
+            <div class="playbook-inside">
+                <div class="playbook-item reveal-up">
+                    <span class="process-number">01</span>
+                    <h4 class="process-title">Field guide</h4>
+                    <p class="process-desc">43 details across Seeing, Type, Surfaces, Alignment, Motion, States &amp; behaviour, and Light &amp; dark. Each one has a rule, a why and a live demo.</p>
+                </div>
+                <div class="playbook-item reveal-up">
+                    <span class="process-number">02</span>
+                    <h4 class="process-title">Starter pack</h4>
+                    <p class="process-desc">Tokens and utilities to paste straight into a project: a type ladder, spacing, easing, layered shadows and press feedback, with Tailwind equivalents.</p>
+                </div>
+                <div class="playbook-item reveal-up">
+                    <span class="process-number">03</span>
+                    <h4 class="process-title">Pre-ship checklist</h4>
+                    <p class="process-desc">49 checks to run before anything goes live, so the finish doesn't depend on who happened to review the work.</p>
+                </div>
+                <div class="playbook-item reveal-up">
+                    <span class="process-number">04</span>
+                    <h4 class="process-title">Critique template</h4>
+                    <p class="process-desc">A structured way to give and receive design feedback, from first impressions to ranked opportunities. Built to make reviews teach, not just judge.</p>
+                </div>
+            </div>
+
+            <p class="playbook-credits reveal-up">Built on the shoulders of Jakub Krehel, Josh Puckett, Rauno Freiberg, Emil Kowalski, Vercel's Web Interface Guidelines and others. Every source is credited inside, because the people who taught me deserve to be read in full.</p>
+        </div>
+    </section>
+
     <!-- Process Section -->
     <section class="process-section">
         <div class="container">
@@ -524,6 +591,7 @@
                         <ul>
                             <li><a href="#work">Work</a></li>
                             <li><a href="#about">About</a></li>
+                            <li><a href="#giving-back">Giving Back</a></li>
                             <li><a href="#faq">FAQ</a></li>
                             <li><a href="#life">Life</a></li>
                             <li><a href="notes.html">Notes</a></li>
