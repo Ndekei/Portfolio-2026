@@ -28,7 +28,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Caveat is only for the handwritten photo captions in "The life behind the work" -->
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
     <!-- Cursor Glow -->
@@ -54,6 +54,7 @@
                 <li><a href="#life" class="nav-link">Life</a></li>
             </ul>
             <div class="nav-actions">
+                <a href="interface-playbook.html" class="nav-link nav-link--secondary">Playbook</a>
                 <a href="notes.html" class="nav-link nav-link--secondary">Notes</a>
                 <button class="theme-toggle" aria-label="Toggle dark mode">
                     <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
@@ -78,6 +79,7 @@
             <li><a href="#work" class="mobile-link">Work</a></li>
             <li><a href="#about" class="mobile-link">About</a></li>
             <li><a href="#life" class="mobile-link">Life</a></li>
+            <li><a href="interface-playbook.html" class="mobile-link">Playbook</a></li>
             <li><a href="notes.html" class="mobile-link">Notes</a></li>
         </ul>
         <div class="mobile-actions">
@@ -347,6 +349,46 @@
         </div>
     </section>
 
+    <!-- Interface Playbook (resource) -->
+    <section class="playbook-section" id="playbook">
+        <div class="container">
+            <div class="playbook-card reveal-up">
+                <div class="playbook-copy">
+                    <span class="section-label">Free resource</span>
+                    <h2 class="section-title">How I know it's <br>ready to ship</h2>
+                    <p class="section-desc">Before anything I design goes out, it has to pass the same bar. I wrote that bar down as <strong>Interface Playbook</strong>: a field guide to the small details that make an interface feel finished, with a rule, a live demo and code for each one.</p>
+                    <p class="section-desc">I'm sharing it openly so other designers can use it, adapt it and ship work they're proud of.</p>
+                    <div class="playbook-ctas">
+                        <a href="interface-playbook.html" class="btn btn--large btn--primary">
+                            <span>Open the playbook</span>
+                            <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="interface-playbook.html#checklist" class="btn btn--large btn--outline">
+                            <span>Pre-ship checklist</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="playbook-meta">
+                    <dl class="playbook-stats">
+                        <div class="playbook-stat"><dt>Details</dt><dd>43</dd></div>
+                        <div class="playbook-stat"><dt>Chapters</dt><dd>7</dd></div>
+                        <div class="playbook-stat"><dt>Pre-ship checks</dt><dd>49</dd></div>
+                        <div class="playbook-stat"><dt>Starter pack</dt><dd>CSS</dd></div>
+                    </dl>
+                    <ul class="playbook-chapters" aria-label="Chapters">
+                        <li>Seeing</li>
+                        <li>Type</li>
+                        <li>Surfaces</li>
+                        <li>Alignment</li>
+                        <li>Motion</li>
+                        <li>States &amp; behavior</li>
+                        <li>Light &amp; dark</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section class="faq-section" id="faq">
         <div class="container">
@@ -492,6 +534,7 @@
                             <li><a href="#faq">FAQ</a></li>
                             <li><a href="#life">Life</a></li>
                             <li><a href="notes.html">Notes</a></li>
+                            <li><a href="interface-playbook.html">Interface Playbook</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">

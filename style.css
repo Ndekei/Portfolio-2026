@@ -2113,3 +2113,136 @@ body:hover .cursor-glow {
         grid-template-columns: 1fr;
     }
 }
+/* ============================================
+   INTERFACE PLAYBOOK (resource)
+   ============================================ */
+.playbook-section {
+    padding: clamp(5.5rem, 9vw, 8.5rem) 0;
+    position: relative;
+}
+
+.playbook-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-border), var(--color-border), transparent);
+}
+
+.playbook-card {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: var(--space-4xl);
+    align-items: center;
+    padding: clamp(2rem, 5vw, 4.5rem);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border-card);
+    border-radius: var(--radius-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.playbook-card::after {
+    content: '';
+    position: absolute;
+    inset: auto -20% -60% auto;
+    width: 60%;
+    aspect-ratio: 1;
+    background: radial-gradient(circle, var(--color-accent-glow), transparent 65%);
+    pointer-events: none;
+}
+
+.playbook-copy .section-desc {
+    max-width: 520px;
+}
+
+.playbook-copy .section-desc + .section-desc {
+    margin-top: var(--space-md);
+}
+
+.playbook-copy strong {
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+
+.playbook-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-top: var(--space-2xl);
+}
+
+.playbook-meta {
+    position: relative;
+    z-index: 1;
+}
+
+.playbook-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--color-border);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: var(--space-xl);
+}
+
+.playbook-stat {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--space-xs);
+    padding: var(--space-xl);
+    background: var(--color-bg);
+}
+
+.playbook-stat dd {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text-primary);
+}
+
+.playbook-stat dt {
+    font-size: 0.75rem;
+    color: var(--color-text-tertiary);
+    letter-spacing: 0.02em;
+}
+
+.playbook-chapters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    list-style: none;
+}
+
+.playbook-chapters li {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border-hover);
+    border-radius: var(--radius-full);
+}
+
+@media (max-width: 900px) {
+    .playbook-card {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .playbook-ctas .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .playbook-stat {
+        padding: var(--space-lg);
+    }
+}
