@@ -1922,33 +1922,38 @@ body:hover .cursor-glow {
 /* ============================================
    NOTES PAGE
    ============================================ */
+/* The fixed header is 88px tall (56px nav + 16px padding top and bottom).
+   Clear it, then add a modest gap that scales with the screen. */
 .notes-main {
     min-height: 100vh;
-    padding: calc(var(--space-7xl) + 56px) 0 var(--space-7xl);
+    padding: calc(88px + clamp(1.5rem, 5vw, 4rem)) 0 clamp(4rem, 10vw, 8rem);
 }
 
 .notes-header {
     max-width: 640px;
-    padding-bottom: var(--space-4xl);
-    margin-bottom: var(--space-4xl);
+    padding-bottom: clamp(1.5rem, 4vw, 3rem);
     border-bottom: 1px solid var(--color-border);
+}
+
+.notes-header .section-label {
+    margin-bottom: var(--space-md);
 }
 
 .notes-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 5.5vw, 4rem);
+    font-size: clamp(2.25rem, 6vw, 4rem);
     font-weight: 600;
     line-height: 1.05;
     letter-spacing: -0.04em;
     color: var(--color-text-primary);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
 }
 
 .notes-desc {
     font-size: 1rem;
     color: var(--color-text-secondary);
-    line-height: 1.75;
-    font-weight: 300;
+    line-height: 1.7;
+    font-weight: 400;
     max-width: 480px;
 }
 
@@ -1962,8 +1967,8 @@ body:hover .cursor-glow {
     display: grid;
     grid-template-columns: 112px 1fr 24px;
     align-items: center;
-    gap: var(--space-3xl);
-    padding: var(--space-2xl) 0;
+    gap: var(--space-2xl);
+    padding: clamp(1.25rem, 3vw, 2rem) 0;
     border-bottom: 1px solid var(--color-border);
     text-decoration: none;
     transition: all var(--transition-fast);
@@ -1974,19 +1979,23 @@ body:hover .cursor-glow {
     border-top: 1px solid var(--color-border);
 }
 
-.note-date {
-    font-size: 0.6875rem;
-    font-weight: 400;
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    white-space: nowrap;
-    align-self: center;
-    transition: color var(--transition-fast);
+.note-item:focus-visible {
+    outline: 2px solid var(--color-accent-light);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
 }
 
-.note-item:hover .note-date {
-    color: var(--color-text-tertiary);
+/* Dates and excerpts use the secondary text colour: the muted and tertiary
+   tokens fall below 4.5:1 contrast in both themes. */
+.note-date {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+    align-self: center;
+    font-variant-numeric: tabular-nums;
 }
 
 .note-body {
@@ -2005,20 +2014,26 @@ body:hover .cursor-glow {
     transition: color var(--transition-fast);
 }
 
-.note-item:hover .note-body .note-title {
+.note-item:hover .note-body .note-title,
+.note-item:focus-visible .note-body .note-title {
     color: var(--color-accent-light);
 }
 
+[data-theme="light"] .note-item:hover .note-body .note-title,
+[data-theme="light"] .note-item:focus-visible .note-body .note-title {
+    color: var(--color-accent);
+}
+
 .note-excerpt {
-    font-size: 0.875rem;
-    color: var(--color-text-tertiary);
-    line-height: 1.7;
-    font-weight: 300;
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+    font-weight: 400;
     max-width: 680px;
 }
 
 .note-arrow {
-    color: var(--color-text-muted);
+    color: var(--color-text-secondary);
     opacity: 0;
     transform: translateX(-8px);
     transition: opacity var(--transition-fast), transform var(--transition-fast);
@@ -2028,7 +2043,8 @@ body:hover .cursor-glow {
     flex-shrink: 0;
 }
 
-.note-item:hover .note-arrow {
+.note-item:hover .note-arrow,
+.note-item:focus-visible .note-arrow {
     opacity: 1;
     transform: translateX(0);
 }
@@ -2037,28 +2053,36 @@ body:hover .cursor-glow {
    NOTE ARTICLE PAGE
    ============================================ */
 .note-page-main {
-    padding: calc(var(--space-7xl) + 56px) 0 var(--space-7xl);
+    padding: calc(88px + clamp(1.5rem, 5vw, 4rem)) 0 clamp(4rem, 10vw, 8rem);
 }
 
 .note-page-container {
     max-width: 700px;
     margin: 0 auto;
-    padding: 0 var(--space-xl);
+    padding: 0 clamp(1.25rem, 5vw, 2rem);
 }
 
+/* 44px tall so it's an easy tap target */
 .note-back {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 0.8125rem;
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-4xl);
+    min-height: 44px;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin-bottom: clamp(1rem, 3vw, 2rem);
     transition: color var(--transition-fast);
     letter-spacing: 0.02em;
 }
 
 .note-back:hover {
     color: var(--color-text-primary);
+}
+
+.note-back:focus-visible {
+    outline: 2px solid var(--color-accent-light);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
 }
 
 .note-back svg {
@@ -2071,79 +2095,76 @@ body:hover .cursor-glow {
 
 .note-page-date {
     display: block;
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     font-weight: 400;
-    color: var(--color-text-muted);
+    color: var(--color-text-secondary);
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    margin-bottom: var(--space-lg);
+    letter-spacing: 0.16em;
+    margin-bottom: var(--space-md);
+    font-variant-numeric: tabular-nums;
 }
 
 .note-page-title {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 4.5vw, 3.25rem);
+    font-size: clamp(2rem, 5vw, 3.25rem);
     font-weight: 600;
     line-height: 1.1;
     letter-spacing: -0.04em;
     color: var(--color-text-primary);
-    margin-bottom: var(--space-4xl);
-    padding-bottom: var(--space-4xl);
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+    padding-bottom: clamp(1.5rem, 4vw, 2.5rem);
     border-bottom: 1px solid var(--color-border);
 }
 
-/* Article body */
-.note-article {
-    padding-top: var(--space-xl);
-}
-
+/* Article body: regular weight and a calmer line height read better on small screens */
 .note-article .note-lead {
-    font-size: 1.125rem;
+    font-size: clamp(1.0625rem, 1rem + 0.4vw, 1.1875rem);
     color: var(--color-text-primary);
-    line-height: 1.85;
+    line-height: 1.7;
     font-weight: 400;
-    margin-bottom: var(--space-2xl);
-    opacity: 0.88;
+    margin-bottom: var(--space-xl);
+    opacity: 0.92;
 }
 
 .note-article p {
-    font-size: 1rem;
+    font-size: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
     color: var(--color-text-secondary);
-    line-height: 1.95;
-    font-weight: 300;
-    margin-bottom: var(--space-xl);
+    line-height: 1.8;
+    font-weight: 400;
+    margin-bottom: var(--space-lg);
 }
 
 .note-article h2 {
     font-family: var(--font-heading);
-    font-size: 1.1875rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--color-text-primary);
     letter-spacing: -0.025em;
-    margin-top: var(--space-4xl);
-    margin-bottom: var(--space-lg);
+    margin-top: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: var(--space-md);
 }
 
 .note-article blockquote {
     border-left: 2px solid var(--color-accent);
-    padding: var(--space-sm) 0 var(--space-sm) var(--space-xl);
-    margin: var(--space-3xl) 0;
+    padding: var(--space-sm) 0 var(--space-sm) clamp(1rem, 4vw, 2rem);
+    margin: clamp(2rem, 5vw, 3rem) 0;
 }
 
 .note-article blockquote p {
     font-family: var(--font-heading);
-    font-size: 1.125rem;
+    font-size: clamp(1.0625rem, 1rem + 0.4vw, 1.1875rem);
     color: var(--color-text-primary);
     font-weight: 400;
-    line-height: 1.7;
+    line-height: 1.65;
     font-style: italic;
     margin-bottom: 0;
-    opacity: 0.8;
+    opacity: 0.88;
 }
 
 /* Note footer / nav between notes */
 .note-page-footer {
-    margin-top: var(--space-6xl);
-    padding-top: var(--space-3xl);
+    margin-top: clamp(3rem, 8vw, 6rem);
+    padding-top: var(--space-2xl);
     border-top: 1px solid var(--color-border);
     display: flex;
     align-items: center;
@@ -2164,11 +2185,11 @@ body:hover .cursor-glow {
 }
 
 .note-nav-label {
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--color-text-muted);
+    letter-spacing: 0.16em;
+    color: var(--color-text-secondary);
 }
 
 .note-nav-title {
@@ -2195,8 +2216,7 @@ body:hover .cursor-glow {
     .note-item {
         grid-template-columns: 1fr 24px;
         grid-template-rows: auto auto;
-        gap: var(--space-md) var(--space-lg);
-        padding: var(--space-xl) 0;
+        gap: var(--space-sm) var(--space-lg);
     }
 
     .note-date {
@@ -2212,6 +2232,18 @@ body:hover .cursor-glow {
     .note-arrow {
         grid-column: 2;
         grid-row: 1 / 3;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Show notes straight away for people who turn off motion */
+@media (prefers-reduced-motion: reduce) {
+    .notes-main .reveal-up,
+    .note-page-main .reveal-up {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 }
 
