@@ -161,13 +161,17 @@
 
     --color-text-primary: #ffffff;
     --color-text-secondary: #8a8a9a;
-    --color-text-tertiary: #555566;
-    --color-text-muted: #3a3a4a;
+    /* tertiary and muted are text colours: both stay at or above 4.5:1
+       contrast on the page and card backgrounds (WCAG AA) */
+    --color-text-tertiary: #80808f;
+    --color-text-muted: #7a7a8b;
 
     /* TitanGate Blue */
     --color-accent: #004CFF;
     --color-accent-light: #3370ff;
     --color-accent-dim: #002d99;
+    /* accent for text: #004CFF is only 3.5:1 on black, this is 5.4:1+ */
+    --color-accent-text: #4d82ff;
     --color-accent-glow: rgba(0, 76, 255, 0.15);
     --color-accent-subtle: rgba(0, 76, 255, 0.06);
 
@@ -220,8 +224,10 @@
 
     --color-text-primary: #111111;
     --color-text-secondary: #555555;
-    --color-text-tertiary: #777777;
-    --color-text-muted: #999999;
+    --color-text-tertiary: #666666;
+    --color-text-muted: #6b6b6b;
+
+    --color-accent-text: #004CFF;
 
     --color-accent-glow: rgba(0, 76, 255, 0.08);
     --color-accent-subtle: rgba(0, 76, 255, 0.04);
@@ -879,7 +885,7 @@ body:hover .cursor-glow {
 }
 
 .project-link:hover {
-    color: var(--color-accent);
+    color: var(--color-accent-text);
 }
 
 .project-link svg {
@@ -1721,7 +1727,7 @@ body:hover .cursor-glow {
 
 .faq-item.active .faq-icon {
     transform: rotate(45deg);
-    color: var(--color-accent);
+    color: var(--color-accent-text);
 }
 
 .faq-answer {
