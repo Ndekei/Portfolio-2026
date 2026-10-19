@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "routes": [
+    { "src": "^/notes(?:\\.html|/(?:index(?:\\.html)?)?)?$", "has": [{ "type": "host", "value": "ndekei.com" }], "status": 308, "headers": { "Location": "https://notes.ndekei.com/" } },
+    { "src": "^/notes(?:\\.html|/(?:index(?:\\.html)?)?)?$", "has": [{ "type": "host", "value": "www.ndekei.com" }], "status": 308, "headers": { "Location": "https://notes.ndekei.com/" } },
+    { "src": "^/(?:notes/|note-)([a-z0-9-]+)(?:\\.html)?/?$", "has": [{ "type": "host", "value": "ndekei.com" }], "status": 308, "headers": { "Location": "https://notes.ndekei.com/$1" } },
+    { "src": "^/(?:notes/|note-)([a-z0-9-]+)(?:\\.html)?/?$", "has": [{ "type": "host", "value": "www.ndekei.com" }], "status": 308, "headers": { "Location": "https://notes.ndekei.com/$1" } },
+
+    { "src": "^/$", "has": [{ "type": "host", "value": "notes.ndekei.com" }], "dest": "/notes/index.html" },
+    { "src": "^/(?:index|notes)(?:\\.html)?/?$", "has": [{ "type": "host", "value": "notes.ndekei.com" }], "status": 308, "headers": { "Location": "/" } },
+    { "src": "^/(?:notes/|note-)([a-z0-9-]+)(?:\\.html)?/?$", "has": [{ "type": "host", "value": "notes.ndekei.com" }], "status": 308, "headers": { "Location": "/$1" } },
+    { "src": "^/([a-z0-9-]+)\\.html$", "has": [{ "type": "host", "value": "notes.ndekei.com" }], "status": 308, "headers": { "Location": "https://ndekei.com/$1.html" } },
+    { "src": "^/([a-z0-9-]+)/?$", "has": [{ "type": "host", "value": "notes.ndekei.com" }], "dest": "/notes/$1.html" },
+
+    { "src": "^/notes$", "status": 308, "headers": { "Location": "/notes/" } },
+    { "src": "^/notes/([a-z0-9-]+)/?$", "dest": "/notes/$1.html" }
+  ]
+}
