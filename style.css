@@ -1925,6 +1925,28 @@ body:hover .cursor-glow {
     text-transform: uppercase;
 }
 
+/* Notes pages: logo and copyright only */
+.footer--minimal {
+    padding: clamp(3rem, 6vw, 4rem) 0 var(--space-xl);
+}
+
+.footer--minimal .footer-logo-svg {
+    display: block;
+    margin-bottom: var(--space-2xl);
+}
+
+.footer--minimal .footer-bottom {
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+    gap: var(--space-md);
+}
+
+@media (max-width: 768px) {
+    .footer--minimal .footer-logo-svg {
+        margin-inline: auto;
+    }
+}
+
 /* ============================================
    NOTES PAGE
    ============================================ */
